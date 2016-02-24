@@ -1,0 +1,2 @@
+nav_gui
+-DCATKIN_DEVEL_PREFIX=/home/kyle/gitMars/ros_nav_gui_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kyle/gitMars/ros_nav_gui_ws/install -G Unix Makefiles
