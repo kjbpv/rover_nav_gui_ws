@@ -21,7 +21,6 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/local/include"
   "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/include"
   "/opt/ros/indigo/include"
-  "/usr/include/opencv"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

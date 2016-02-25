@@ -164,6 +164,48 @@ _nav_gui_generate_messages_check_deps_Num/fast:
 .PHONY : _nav_gui_generate_messages_check_deps_Num/fast
 
 # Convenience name for target.
+nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule:
 	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule
@@ -374,46 +416,46 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-nav_gui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : nav_gui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: nav_gui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
+sensor_msgs_generate_messages_cpp: nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-nav_gui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : nav_gui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_lisp: nav_gui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
+sensor_msgs_generate_messages_lisp: nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-nav_gui/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : nav_gui/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_py: nav_gui/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
+sensor_msgs_generate_messages_py: nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/std_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+sensor_msgs_generate_messages_py/fast:
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
 
 src/display.o: src/display.cpp.o
 .PHONY : src/display.o
@@ -591,6 +633,9 @@ help:
 	@echo "... depend"
 	@echo "... _nav_gui_generate_messages_check_deps_Num"
 	@echo "... edit_cache"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -611,9 +656,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... src/display.o"
 	@echo "... src/display.i"

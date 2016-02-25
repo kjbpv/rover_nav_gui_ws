@@ -15,20 +15,20 @@ using namespace cv;
 
 patch::patch()
 {
-    std::cout << "patch::patch()" << std::endl;
+//    std::cout << "patch::patch()" << std::endl;
     width = 30;
     
 }
 
 patch::patch(cv::Mat baseImage, cv::Point coords, int widthVal)
 {
-    std::cout << "patch::patch()" << std::endl;
+//    std::cout << "patch::patch()" << std::endl;
     make(baseImage,coords,widthVal);
 }
 
 void patch::make(cv::Mat baseImage, cv::Point coords)
 {    // check boundaries of baseImage to make sure that patch will fit
-    std::cout << "patch::make()" << std::endl;
+//    std::cout << "patch::make()" << std::endl;
     int baseX = baseImage.cols;
     int baseY = baseImage.rows;
     if (baseX - coords.x >= width/2)
@@ -50,14 +50,14 @@ void patch::make(cv::Mat baseImage, cv::Point coords)
     }
     else coordinates.y = baseY - width/2;
     
-	std::cout << "baseImage(Rect()).copyTo(image);" << std::endl;
+//	std::cout << "baseImage(Rect()).copyTo(image);" << std::endl;
     baseImage(Rect(coordinates.x - width/2, coordinates.y - width/2, width+1, width+1)).copyTo(image);
-	std::cout << "baseImage DONE" << std::endl;
+//	std::cout << "baseImage DONE" << std::endl;
 }
 
 void patch::make(cv::Mat baseImage, cv::Point coords, int widthVal)
 {
-    std::cout << "patch::make()" << std::endl;
+//    std::cout << "patch::make()" << std::endl;
     coordinates = cv::Point(0,0);
     // set width
     if (widthVal%2 == 1)
@@ -69,15 +69,16 @@ void patch::make(cv::Mat baseImage, cv::Point coords, int widthVal)
     // check boundaries of baseImage to make sure that patch will fit
     int baseX = baseImage.cols;
     int baseY = baseImage.rows;
-    if (baseX - coords.x >= width/2)
+    if (baseX - coords.x >= width/2) // not too far to the right
     {
-        if (coords.x >= width/2 + 1)
+        if (coords.x >= width/2 + 1) // not too far to the left
         {
             coordinates.x = coords.x;
         }
         else coordinates.x = width/2 + 1;
     }
     else coordinates.x = baseX - width/2;
+
     if (baseY - coords.y >= width/2)
     {
         if (coords.y >= width/2 + 1)
@@ -88,13 +89,13 @@ void patch::make(cv::Mat baseImage, cv::Point coords, int widthVal)
     }
     else coordinates.y = baseY - width/2;
     
-	std::cout << "baseImage(Rect()).copyTo(image);" << std::endl;
+//	std::cout << "baseImage(Rect()).copyTo(image);" << std::endl;
     baseImage(Rect(coordinates.x - width/2, coordinates.y - width/2, width+1, width+1)).copyTo(image);
-	std::cout << "baseImage DONE" << std::endl;
+//	std::cout << "baseImage DONE" << std::endl;
 }
 
 void patch::redraw(cv::Mat baseImage)
 {
-    std::cout << "patch::redraw()" << std::endl;
+//    std::cout << "patch::redraw()" << std::endl;
     image.copyTo(baseImage(Rect(coordinates.x - width/2, coordinates.y - width/2, width+1, width+1)));
 }

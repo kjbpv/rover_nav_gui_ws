@@ -17,11 +17,11 @@ using namespace std;
 
 screenshot::screenshot()
 {
-    cout << "screenshot::screenshot()" << endl;
+//    cout << "screenshot::screenshot()" << endl;
 }
 screenshot::screenshot(cv::Mat IMG, double latVal, double longVal, cv::Point origin, double LATconversion, double LONGconversion, double MperPix)
 {
-    cout << "screenshot::screenshot()" << endl;
+//    cout << "screenshot::screenshot()" << endl;
     image = IMG;
     latitude = latVal;
     longitude = longVal;
@@ -33,7 +33,7 @@ screenshot::screenshot(cv::Mat IMG, double latVal, double longVal, cv::Point ori
 
 void screenshot::init(cv::Mat IMG, double latVal, double longVal, cv::Point origin, double LATconversion, double LONGconversion, double MperPix)
 {
-    cout << "screenshot::init()" << endl;
+//    cout << "screenshot::init()" << endl;
     image = IMG;
     latitude = latVal;
     longitude = longVal;
@@ -45,49 +45,49 @@ void screenshot::init(cv::Mat IMG, double latVal, double longVal, cv::Point orig
 
 cv::Mat screenshot::getImage()
 {
-    cout << "screenshot::getImage()" << endl;
+//    cout << "screenshot::getImage()" << endl;
     return image;
 }
 
 double screenshot::getLatitude()
 {
-    cout << "screenshot::getLatitude()" << endl;
+//    cout << "screenshot::getLatitude()" << endl;
     return latitude;
 }
 
 double screenshot::getLongitude()
 {
-    cout << "screenshot::getLongitude()" << endl;
+//    cout << "screenshot::getLongitude()" << endl;
     return longitude;
 }
 
 cv::Point screenshot::getpixelOrigin()
 {
-    cout << "screenshot::getPixelOrigin()" << endl;
+//    cout << "screenshot::getPixelOrigin()" << endl;
     return pixelOrigin;
 }
 
 double screenshot::getPixelsPerLAT()
 {
-    cout << "screenshot::getOixelsPerLAT()" << endl;
+//    cout << "screenshot::getOixelsPerLAT()" << endl;
     return PixelsPerLAT;
 }
 
 double screenshot::getPixelsPerLONG()
 {
-    cout << "screenshot::getPixelsPerLONG()" << endl;
+//    cout << "screenshot::getPixelsPerLONG()" << endl;
     return PixelsPerLONG;
 }
 
 double screenshot::getMetersPerPixel()
 {
-    cout << "screenshot::getMetersPerPixel()" << endl;
+//    cout << "screenshot::getMetersPerPixel()" << endl;
     return MetersPerPixel;
 }
 
 cv::Point screenshot::calculateCoords(double latVal, double longVal)
 {
-    cout << "screenshot::calculateCoords()" << endl;
+//    cout << "screenshot::calculateCoords()" << endl;
     cv::Point coordinates;
 //    std::cout << "longVal: " << longVal << std::endl;
 //    std::cout << "latVal: " << latVal << std::endl;
@@ -106,37 +106,37 @@ cv::Point screenshot::calculateCoords(double latVal, double longVal)
 
 void screenshot::setImage(cv::Mat img)
 {
-    cout << "screenshot::setImage()" << endl;
+//    cout << "screenshot::setImage()" << endl;
     image = img;
 }
 void screenshot::setLatitude(double val)
 {
-    cout << "screenshot::setLatitude()" << endl;
+//    cout << "screenshot::setLatitude()" << endl;
     latitude = val;
 }
 void screenshot::setLongitude(double val)
 {
-    cout << "screenshot::setLongitude()" << endl;
+//    cout << "screenshot::setLongitude()" << endl;
     longitude = val;
 }
 void screenshot::setPixelOrigin(cv::Point origin)
 {
-    cout << "screenshot::setPixelOrigin()" << endl;
+//    cout << "screenshot::setPixelOrigin()" << endl;
     pixelOrigin  = origin;
 }
 void screenshot::setPixelsPerLAT(double val)
 {
-    cout << "screenshot::setPixelsPerLAT()" << endl;
+//    cout << "screenshot::setPixelsPerLAT()" << endl;
     PixelsPerLAT = val;
 }
 void screenshot::setPixelsPerLONG(double val)
 {
-    cout << "screenshot::setPixelsPerLONG()" << endl;
+//    cout << "screenshot::setPixelsPerLONG()" << endl;
     PixelsPerLONG = val;
 }
 void screenshot::setMetersPerPixel(double val)
 {
-    cout << "screenshot::setMetersPerPixel()" << endl;
+//    cout << "screenshot::setMetersPerPixel()" << endl;
     MetersPerPixel = val;
 }
 

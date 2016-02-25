@@ -36,7 +36,13 @@ nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.o: /usr/local/include/open
 nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.o: /usr/local/include/opencv2/video/tracking.hpp
 nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.o: /usr/local/include/opencv2/video/video.hpp
 
+nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/devel/include/rover_msgs/NavState.h
+nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.h
 nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_subscriber.cpp
+nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/patch.h
+nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/rover.h
+nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/screenshot.h
+nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/waypoint.h
 nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
 nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h

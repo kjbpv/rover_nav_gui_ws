@@ -37,7 +37,13 @@ nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.o
  /usr/local/include/opencv2/video/tracking.hpp
  /usr/local/include/opencv2/video/video.hpp
 nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o
+ /home/kyle/gitMars/ros_nav_gui_ws/devel/include/rover_msgs/NavState.h
+ /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.h
  /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_subscriber.cpp
+ /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/patch.h
+ /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/rover.h
+ /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/screenshot.h
+ /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/waypoint.h
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
  /opt/ros/indigo/include/ros/advertise_options.h

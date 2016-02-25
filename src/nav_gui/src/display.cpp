@@ -9,41 +9,59 @@
 #include <opencv2/opencv.hpp>
 #include <stdio.h>
 #include <iostream>
+#include <fstream>
 #include <string.h>
 #include "display.h"
 
 using namespace std;
 using namespace cv;
 
-display::display(string mapFile, string radarFile, string dataFile) : mRover(dataFile)
+display::display(string mapImgFile, string radarImgFile, string waypointFile, string mapInitFile)
 {
-    cout << "display::display()" << endl;
+//    cout << "display::display()" << endl;
     mainBox = cv::Mat(660,1280,CV_8UC3,cv::Scalar(80,80,80));
     mapBox = mainBox(cv::Rect(10,10,800, 640));
     radarBox = mainBox(cv::Rect(820,10,450,450));
-    cv::Mat img = cv::imread(mapFile);
+    cv::Mat img = cv::imread(mapImgFile);
     cv::pyrDown(img, img);
     img.copyTo(mapBox);
     
-    radarBase = cv::imread(radarFile);
+    radarBase = cv::imread(radarImgFile);
     radarBase.copyTo(radarImg);
     radarImg(cv::Rect(125,125,450,450)).copyTo(radarBox);
     
     // screenshot parameters
-    double LATval = 38.417127;
-    double LONGval = -110.787396;
-    // DIVIDED by 2.0 because of pyrDown
-    cv::Point ptOrigin((199-406)/2,(1404-120)/2); // was 199,1404
-    double dYdLAT = -424443.706409723/2.0;
-    double dXdLONG = 333722.798305457/2.0;
-    double dMeterdPixel = 50.0/190.0;
+    ifstream mpInitFile;
+    mpInitFile.open(mapInitFile.c_str());
+    double LATval,LONGval,ptX,ptY,dYdLAT,dXdLONG,dMeterdPixel; 
+
+//    double LATval = 38.417127;
+//    double LONGval = -110.787396;
+//   // DIVIDED by 2.0 because of pyrDown
+//    cv::Point ptOrigin; // ((199-406)/2,(1404-120)/2); // was 199,1404
+//    double dYdLAT = -424443.706409723/2.0;
+//    double dXdLONG = 333722.798305457/2.0;
+//    double dMeterdPixel = 50.0/190.0;
+    
+    mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
+    cv::Point ptOrigin(ptX,ptY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     
     // add Waypoints
-    addWaypoint("tools",38.419060,-110.786316);
-    addWaypoint("hammer",38.418397,-110.785769);
-    addWaypoint("screwdriver",38.419357,-110.783796);
-    addWaypoint("wrench",38.418494,-110.783336);
+    ifstream wayPtFile;
+    wayPtFile.open(waypointFile.c_str());
+    while (!wayPtFile.eof())
+    {
+	string name;
+	double latTmp;
+	double longTmp;
+	wayPtFile >> name >> latTmp >> longTmp;
+	addWaypoint(name.c_str(),latTmp,longTmp);
+    }
+//    addWaypoint("tools",38.419060,-110.786316);
+//    addWaypoint("hammer",38.418397,-110.785769);
+//    addWaypoint("screwdriver",38.419357,-110.783796);
+//    addWaypoint("wrench",38.418494,-110.783336);
     
     for (int i = 0; i < waypoints.size(); i++)
     {
@@ -52,14 +70,14 @@ display::display(string mapFile, string radarFile, string dataFile) : mRover(dat
     
     roverPatch.make(myMap.getImage(), Point(30,30),30);
    
-    cout << "cv::namedindow()" << endl;
+//    cout << "cv::namedindow()" << endl;
     cv::namedWindow("mainWindow",cv::WINDOW_AUTOSIZE);
     cout << "cv::namedindow() DONE" << endl;
 }
 
 void display::drawTriangle(Mat img, int base, int height, int angle, Point center, Scalar color)
 {
-    cout << "display::drawTriangle()" << endl;
+//    cout << "display::drawTriangle()" << endl;
     angle = -angle;
     
     Point2f p1(base/2,height/2);
@@ -105,13 +123,14 @@ void display::drawTriangle(Mat img, int base, int height, int angle, Point cente
  */
 void display::updateDisplay()
 {
-    cout << "display::updateDisplay()" << endl;
+//    cout << "display::updateDisplay()" << endl;
     cv::imshow("mainWindow", mainBox);
 }
 
 void display::updateRover()
 {
-    cout << "display::updateRover()" << endl;
+//    cout << "display::updateRover()" << endl;
+
     // Read in rover data from file
     mRover.readData();
     
@@ -123,10 +142,19 @@ void display::updateRover()
     mRover.setCoordinates(myMap);
 }
 
+void display::updateRover(double latVal, double longVal, double magVal)
+{
+    mRover.setLatitude(latVal);
+    mRover.setLongitude(longVal);
+    mRover.setMagHeading(magVal);
+    mRover.setAngle(mRover.getMagHeading());
+    mRover.setCoordinates(myMap);
+}
+
 void display::rotateRadar()
 {
-    cout << "display::rotateRadar()" << endl;
-    cout << "display::drawRover()" << endl;
+//    cout << "display::rotateRadar()" << endl;
+//    cout << "display::drawRover()" << endl;
     Mat rotationMatrix;
     rotationMatrix = getRotationMatrix2D(Point2f(350,350), -1.0*mRover.getAngle(), 1.0);
     // rotate radar image based on rover angle
@@ -137,7 +165,7 @@ void display::rotateRadar()
 
 void display::drawWaypoints()
 {
-    cout << "display::drawWaypoints()" << endl;
+//    cout << "display::drawWaypoints()" << endl;
     double shortestDistance = getDistance(waypoints[0], mRover) + 1.0;
     target = &waypoints[0];
     for (int i = 0; i < waypoints.size(); i++)
@@ -150,7 +178,7 @@ void display::drawWaypoints()
             target = &waypoints[i];
         }
         waypoints[i].setAngleFromRover(getAngle(waypoints[i], mRover));
-        cout << "ANGLE: " << waypoints[i].getAngleFromRover() << endl;
+//        cout << "ANGLE: " << waypoints[i].getAngleFromRover() << endl;
     }
     
     // draw waypoints on map, with target highlighted in yellow
@@ -187,15 +215,12 @@ void display::drawWaypoints()
 
 void display::drawRover()
 {
-    cout << "display::drawRover()" << endl;
+//    cout << "display::drawRover()" << endl;
     // draw patch to cover previous rover
-    
     roverPatch.redraw(myMap.getImage());
     
     // Take patch to cover up rover in next frame
-    
     roverPatch.make(myMap.getImage(), mRover.getCoordinates());
-
     
     // draw the rover triangle within the radar box
     drawTriangle(radarBox, 20, 32, 0, Point(223,225), Scalar(255,255,255));
@@ -206,7 +231,7 @@ void display::drawRover()
 
 double display::getDistance(waypoint p1, waypoint p2)
 {
-    cout << "display::getDistance()" << endl;
+//    cout << "display::getDistance()" << endl;
     double distanceX,distanceY,distance;
     distanceX = (p1.getLongitude()-p2.getLongitude())*myMap.getPixelsPerLONG()*myMap.getMetersPerPixel();
     distanceY = (p1.getLatitude()-p2.getLatitude())*myMap.getPixelsPerLAT()*myMap.getMetersPerPixel();
@@ -216,20 +241,20 @@ double display::getDistance(waypoint p1, waypoint p2)
 
 double display::getAngle(waypoint p1, waypoint p2)
 {
-    cout << "display::getAngle()" << endl;
+//    cout << "display::getAngle()" << endl;
     double angle = atan2((p1.getCoordinates().y - p2.getCoordinates().y) , (p1.getCoordinates().x - p2.getCoordinates().x));
     return angle;
 }
 
 void display::addWaypoint(string name, double latitude, double longitude)
 {
-    cout << "display::addWaypoint()" << endl;
+//    cout << "display::addWaypoint()" << endl;
     waypoints.push_back(waypoint(name,latitude,longitude));
 }
 
 void display::addPatch(waypoint myWaypoint)
 {
-    cout << "display::addPatch()" << endl;
+//    cout << "display::addPatch()" << endl;
 }
 
 

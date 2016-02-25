@@ -23,9 +23,9 @@ int main(int argc, const char * argv[])
 {
     cout << "OpenCV version: " << CV_VERSION << endl;
     
-    string mapFile = "AstronautAssist1.png";
-    string radarFile = "radar.png";
-    string dataFile = "roverData.txt";
+    string mapFile = "screenshots/AstronautAssist1.png";
+    string radarFile = "screenshots/radar.png";
+    string dataFile = "screenshots/roverData.txt";
     display myDisplay(mapFile,radarFile,dataFile);
     
     for (int i = 0; i < 210; i++)

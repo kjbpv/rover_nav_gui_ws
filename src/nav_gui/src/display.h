@@ -24,21 +24,15 @@
 class display
 {
 public:
-    display(string mapFile, string radarFile, string dataFile);
+    display(){}
+    display(string mapImageFile, string radarFile, string waypointFile, string mapInitFile);
     ~display(){}
     void drawTriangle(cv::Mat img, int base, int height, int angle, cv::Point center, cv::Scalar color);
-    // void drawCircle(cv::Mat img, cv::Point center, int radius, cv::Scalar color); // do I need this
-    // void drawSquare(cv::Point center,int width, cv::Scalar color);
-    /* Update the following:
-     
-     Rover Position
-     Radar orientation
-     Waypoint positions on radar
-     Text specifying waypoint distances
-     
-     */
+
+    void init(string mapFile, string radarFile, string dataFile, string waypointFile);
     void updateDisplay();
     void updateRover();
+    void updateRover(double latVal, double longVal, double magVal);
     void rotateRadar();
     void drawWaypoints();
     void drawRover();

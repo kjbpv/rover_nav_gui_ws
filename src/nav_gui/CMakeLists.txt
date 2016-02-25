@@ -6,6 +6,9 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   genmsg
   std_msgs
+  sensor_msgs
+  geometry_msgs
+  rover_msgs
 )
 
 find_package(OpenCV REQUIRED)

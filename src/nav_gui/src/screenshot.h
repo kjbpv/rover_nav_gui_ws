@@ -36,9 +36,9 @@ public:
     void setMetersPerPixel(double val);
     
     cv::Point calculateCoords(double latVal, double longVal);
-    
-private:
     cv::Mat image;
+
+private:
     double latitude;
     double longitude;
     cv::Point pixelOrigin;

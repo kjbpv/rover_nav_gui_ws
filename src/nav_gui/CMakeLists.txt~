@@ -34,9 +34,6 @@ catkin_package(
 include_directories(include ${catkin_INCLUDE_DIRS})
 include_directories(SYSTEM ${OpenCV_INCLUDE_DIRS})
 
-#include_directories(/usr/lib/x86_64-linux-gnu/libconsole_bridge.so)
-#link_directories(/usr/lib/x86_64-linux-gnu/libconsole_bridge.so)
-
 add_executable(nav_publisher src/nav_publisher.cpp)
 target_link_libraries(nav_publisher ${catkin_LIBRARIES})
 add_dependencies(nav_publisher nav_gui_generate_messages_cpp)

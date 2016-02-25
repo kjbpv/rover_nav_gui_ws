@@ -24,7 +24,7 @@
 class display
 {
 public:
-    display(string mapFile, string radarFile, string dataFile);
+    display(string mapFile, string radarFile, string dataFile, string waypointFile);
     ~display(){}
     void drawTriangle(cv::Mat img, int base, int height, int angle, cv::Point center, cv::Scalar color);
     // void drawCircle(cv::Mat img, cv::Point center, int radius, cv::Scalar color); // do I need this
