@@ -43,12 +43,9 @@ int main(int argc, char **argv)
     	stateMsg.position[1] = 107.557289; 	// Longitude
 	stateMsg.phi = 10;			// course angle?
     }
-//    stateMsg.position[0] = 35.557567; 	// Latitude
-//    stateMsg.position[1] = 107.557289; 	// Longitude
     stateMsg.position[2] = 0.00459; 	// altitude
     
     stateMsg.Vw = 0;
-//    stateMsg.phi = 10;			// course angle?
     stateMsg.theta = 0;
     stateMsg.psi = 0;
     stateMsg.chi = 0;

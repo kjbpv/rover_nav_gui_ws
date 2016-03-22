@@ -39,8 +39,8 @@ int main(int argc, char **argv)
     }
     else 
     {
-    	stateMsg.position[0] = 35.557567; 	// Latitude
-    	stateMsg.position[1] = 107.557289; 	// Longitude
+    	stateMsg.position[0] = 40.247780; 	// Latitude
+    	stateMsg.position[1] = -111.645576; 	// Longitude
 	stateMsg.phi = 10;			// course angle?
     }
     stateMsg.position[2] = 0.00459; 	// altitude

@@ -22,20 +22,6 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.cpp
-opencv2/opencv.hpp
--
-stdio.h
--
-iostream
--
-fstream
--
-string.h
--
-display.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.h
-
 /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.h
 iostream
 -

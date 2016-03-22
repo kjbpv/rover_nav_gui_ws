@@ -25,19 +25,29 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
     cv::Mat img = cv::imread(mapImgFile);
     cv::pyrDown(img, img);
     img.copyTo(mapBox);
+
+    std::cout << "cols: " << img.cols << ", rows: " << img.rows << std::endl; 
     
     radarBase = cv::imread(radarImgFile);
     radarBase.copyTo(radarImg);
     radarImg(cv::Rect(125,125,450,450)).copyTo(radarBox);
     
     // screenshot parameters
-    double LATval = 38.417127;
-    double LONGval = -110.787396;
-    // DIVIDED by 2.0 because of pyrDown
-    cv::Point ptOrigin((199-406)/2,(1404-120)/2); // was 199,1404
-    double dYdLAT = -424443.706409723/2.0;
-    double dXdLONG = 333722.798305457/2.0;
-    double dMeterdPixel = 50.0/190.0;
+    ifstream mpInitFile;
+    mpInitFile.open(mapInitFile.c_str());
+    double LATval,LONGval,ptX,ptY,dYdLAT,dXdLONG,dMeterdPixel; 
+
+//    double LATval = 38.417127;
+//    double LONGval = -110.787396;
+//   // DIVIDED by 2.0 because of pyrDown
+//    cv::Point ptOrigin; // ((199-406)/2,(1404-120)/2); // was 199,1404
+//    double dYdLAT = -424443.706409723/2.0;
+//    double dXdLONG = 333722.798305457/2.0;
+//    double dMeterdPixel = 50.0/190.0;
+    
+    mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
+    std::cout << "LATval: " << LATval << ", LONGval: " << LONGval << " , ptX: " << ptX << " , ptY: " << ptY << " , dYdLAT: " << dYdLAT << " , dXdLONG: " << dXdLONG << " dMdPix: " << dMeterdPixel << std::endl;
+    cv::Point ptOrigin(ptX,ptY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     
     // add Waypoints
@@ -65,7 +75,7 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
    
 //    cout << "cv::namedindow()" << endl;
     cv::namedWindow("mainWindow",cv::WINDOW_AUTOSIZE);
-    cout << "cv::namedindow() DONE" << endl;
+//    cout << "cv::namedindow() DONE" << endl;
 }
 
 void display::drawTriangle(Mat img, int base, int height, int angle, Point center, Scalar color)
@@ -116,7 +126,7 @@ void display::drawTriangle(Mat img, int base, int height, int angle, Point cente
  */
 void display::updateDisplay()
 {
-//    cout << "display::updateDisplay()" << endl;
+    cout << "display::updateDisplay()" << endl;
     cv::imshow("mainWindow", mainBox);
 }
 
@@ -146,7 +156,7 @@ void display::updateRover(double latVal, double longVal, double magVal)
 
 void display::rotateRadar()
 {
-//    cout << "display::rotateRadar()" << endl;
+    cout << "display::rotateRadar()" << endl;
 //    cout << "display::drawRover()" << endl;
     Mat rotationMatrix;
     rotationMatrix = getRotationMatrix2D(Point2f(350,350), -1.0*mRover.getAngle(), 1.0);
@@ -158,7 +168,7 @@ void display::rotateRadar()
 
 void display::drawWaypoints()
 {
-//    cout << "display::drawWaypoints()" << endl;
+    cout << "display::drawWaypoints()" << endl;
     double shortestDistance = getDistance(waypoints[0], mRover) + 1.0;
     target = &waypoints[0];
     for (int i = 0; i < waypoints.size(); i++)
@@ -208,7 +218,7 @@ void display::drawWaypoints()
 
 void display::drawRover()
 {
-//    cout << "display::drawRover()" << endl;
+    cout << "display::drawRover()" << endl;
     // draw patch to cover previous rover
     roverPatch.redraw(myMap.getImage());
     

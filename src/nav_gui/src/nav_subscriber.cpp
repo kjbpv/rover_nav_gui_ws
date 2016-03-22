@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 
   // initialize GUI 
 
-  std::string mapFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/AstronautAssist1.png";
+  std::string mapFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/Rock_canyon1.png";
   std::string radarFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/radar.png";
   std::string waypointFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/waypoints.txt";
   std::string mapInitFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/mapInit.txt";

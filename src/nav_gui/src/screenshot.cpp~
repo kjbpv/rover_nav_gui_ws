@@ -69,7 +69,7 @@ cv::Point screenshot::getpixelOrigin()
 
 double screenshot::getPixelsPerLAT()
 {
-//    cout << "screenshot::getOixelsPerLAT()" << endl;
+//    cout << "screenshot::getPixelsPerLAT()" << endl;
     return PixelsPerLAT;
 }
 
@@ -89,14 +89,14 @@ cv::Point screenshot::calculateCoords(double latVal, double longVal)
 {
 //    cout << "screenshot::calculateCoords()" << endl;
     cv::Point coordinates;
-    std::cout << "longVal: " << longVal << std::endl;
-    std::cout << "latVal: " << latVal << std::endl;
-    std::cout << "longitude: " << longitude << std::endl;
-    std::cout << "latitude: " << latitude << std::endl;
+//    std::cout << "longVal: " << longVal << std::endl;
+//    std::cout << "latVal: " << latVal << std::endl;
+//    std::cout << "longitude: " << longitude << std::endl;
+//    std::cout << "latitude: " << latitude << std::endl;
     
     double x = (longVal - longitude)*PixelsPerLONG + pixelOrigin.x;
     double y = (latVal - latitude)*PixelsPerLAT + pixelOrigin.y;
-    std::cout << "X: " << x << ", Y: " << y << std::endl;
+//    std::cout << "X: " << x << ", Y: " << y << std::endl;
     
     coordinates.x = x;
     coordinates.y = y;

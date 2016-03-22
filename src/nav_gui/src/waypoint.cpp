@@ -66,33 +66,37 @@ void waypoint::setCoordinates(screenshot myMap)
 {
     setCoordinates(myMap.calculateCoords(latitude, longitude));
 
-//    if (coordinates.x < 0)
-//    {
-//	setCoordinates(cv::Point(0,coordinates.y));
-//    }
-//    if (coordinates.x >= myMap.image.cols)
-//    {
-//	setCoordinates(cv::Point(myMap.image.cols-1,coordinates.y));
-//    }
-//    if (coordinates.y < 0)
-//    {
-//	setCoordinates(cv::Point(coordinates.x,0));
-//    }
-//    if (coordinates.y >= myMap.image.rows)
-//    {
-//	setCoordinates(cv::Point(coordinates.x,myMap.image.rows-1));
-//    }
-
-//    std::cout << coordinates.x << " , " << coordinates.y << std::endl;
-
-    if (coordinates.x < 0 || coordinates.x >= myMap.image.cols)
+    if (coordinates.x < 0)
     {
-	setCoordinates(cv::Point(0,coordinates.y));
+	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+	coordinates.x = 0;
     }
-    if (coordinates.y < 0 || coordinates.y >= myMap.image.rows)
+    if (coordinates.x >= myMap.image.cols)
     {
-	setCoordinates(cv::Point(coordinates.x,0));
+	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+	coordinates.x = myMap.image.cols - 1;
     }
+    if (coordinates.y < 0)
+    {
+	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+	coordinates.y = 0;
+    }
+    if (coordinates.y >= myMap.image.rows)
+    {
+	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+	coordinates.y = myMap.image.rows - 1;
+    }
+
+    std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+
+//    if (coordinates.x < 0 || coordinates.x >= myMap.image.cols)
+//    {
+//	setCoordinates(cv::Point(0,coordinates.y-1));
+//    }
+//    if (coordinates.y < 0 || coordinates.y >= myMap.image.rows)
+//    {
+//	setCoordinates(cv::Point(coordinates.x-1,0));
+//    }
 }
 
 void waypoint::setCoordinates(cv::Point coords)

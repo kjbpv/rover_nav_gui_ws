@@ -25,6 +25,8 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
     cv::Mat img = cv::imread(mapImgFile);
     cv::pyrDown(img, img);
     img.copyTo(mapBox);
+
+    std::cout << "cols: " << img.cols << ", rows: " << img.rows << std::endl; 
     
     radarBase = cv::imread(radarImgFile);
     radarBase.copyTo(radarImg);
@@ -44,6 +46,7 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
 //    double dMeterdPixel = 50.0/190.0;
     
     mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
+    std::cout << "LATval: " << LATval << ", LONGval: " << LONGval << " , ptX: " << ptX << " , ptY: " << ptY << " , dYdLAT: " << dYdLAT << " , dXdLONG: " << dXdLONG << " dMdPix: " << dMeterdPixel << std::endl;
     cv::Point ptOrigin(ptX,ptY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     
@@ -72,7 +75,7 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
    
 //    cout << "cv::namedindow()" << endl;
     cv::namedWindow("mainWindow",cv::WINDOW_AUTOSIZE);
-    cout << "cv::namedindow() DONE" << endl;
+//    cout << "cv::namedindow() DONE" << endl;
 }
 
 void display::drawTriangle(Mat img, int base, int height, int angle, Point center, Scalar color)
