@@ -1,0 +1,3 @@
+
+    double LATval = 38.417127;    double LONGval = -110.787396  cv::Point ptOrigin((199-406)/2,(1404-120)/2)
+    double dYdLAT = -424443.706409723/2.0;    double dXdLONG = 333722.798305457/2.0;    double dMeterdPixel = 50.0/190.0;  myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);

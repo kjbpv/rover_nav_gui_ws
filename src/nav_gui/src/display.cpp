@@ -130,6 +130,14 @@ void display::updateDisplay()
     cv::imshow("mainWindow", mainBox);
 }
 
+void display::updateDisplayMini()
+{
+// For miniaturized GUI (lower screen resolutions)
+    cv::Mat tmp;
+    pyrDown(mainBox,tmp);
+    cv::imshow("mainWindow",tmp);
+}
+
 void display::updateRover()
 {
 //    cout << "display::updateRover()" << endl;

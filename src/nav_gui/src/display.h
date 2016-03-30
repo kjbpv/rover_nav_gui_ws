@@ -30,7 +30,8 @@ public:
     void drawTriangle(cv::Mat img, int base, int height, int angle, cv::Point center, cv::Scalar color);
 
     void init(string mapFile, string radarFile, string dataFile, string waypointFile);
-    void updateDisplay();
+    void updateDisplay(); // displays entire GUI window
+    void updateDisplayMini(); // displays entire GUI window in miniature size (for lower screen resolutions)
     void updateRover();
     void updateRover(double latVal, double longVal, double magVal);
     void rotateRadar();
