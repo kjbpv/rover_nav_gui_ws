@@ -68,26 +68,26 @@ void waypoint::setCoordinates(screenshot myMap)
 
     if (coordinates.x < 0)
     {
-	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+//	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
 	coordinates.x = 0;
     }
     if (coordinates.x >= myMap.image.cols)
     {
-	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+//	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
 	coordinates.x = myMap.image.cols - 1;
     }
     if (coordinates.y < 0)
     {
-	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+//	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
 	coordinates.y = 0;
     }
     if (coordinates.y >= myMap.image.rows)
     {
-	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+//	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
 	coordinates.y = myMap.image.rows - 1;
     }
 
-    std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
+//    std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
 
 //    if (coordinates.x < 0 || coordinates.x >= myMap.image.cols)
 //    {

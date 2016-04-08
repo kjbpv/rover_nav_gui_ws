@@ -86,17 +86,6 @@ void waypoint::setCoordinates(screenshot myMap)
 //	std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
 	coordinates.y = myMap.image.rows - 1;
     }
-
-//    std::cout << "X: " << coordinates.x << ", Y: " << coordinates.y << std::endl;
-
-//    if (coordinates.x < 0 || coordinates.x >= myMap.image.cols)
-//    {
-//	setCoordinates(cv::Point(0,coordinates.y-1));
-//    }
-//    if (coordinates.y < 0 || coordinates.y >= myMap.image.rows)
-//    {
-//	setCoordinates(cv::Point(coordinates.x-1,0));
-//    }
 }
 
 void waypoint::setCoordinates(cv::Point coords)

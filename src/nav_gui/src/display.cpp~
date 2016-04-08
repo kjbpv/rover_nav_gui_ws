@@ -26,7 +26,7 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
     cv::pyrDown(img, img);
     img.copyTo(mapBox);
 
-    std::cout << "cols: " << img.cols << ", rows: " << img.rows << std::endl; 
+//    std::cout << "cols: " << img.cols << ", rows: " << img.rows << std::endl; 
     
     radarBase = cv::imread(radarImgFile);
     radarBase.copyTo(radarImg);
@@ -46,7 +46,7 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
 //    double dMeterdPixel = 50.0/190.0;
     
     mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
-    std::cout << "LATval: " << LATval << ", LONGval: " << LONGval << " , ptX: " << ptX << " , ptY: " << ptY << " , dYdLAT: " << dYdLAT << " , dXdLONG: " << dXdLONG << " dMdPix: " << dMeterdPixel << std::endl;
+//    std::cout << "LATval: " << LATval << ", LONGval: " << LONGval << " , ptX: " << ptX << " , ptY: " << ptY << " , dYdLAT: " << dYdLAT << " , dXdLONG: " << dXdLONG << " dMdPix: " << dMeterdPixel << std::endl;
     cv::Point ptOrigin(ptX,ptY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     
@@ -61,10 +61,6 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
 	wayPtFile >> name >> latTmp >> longTmp;
 	addWaypoint(name.c_str(),latTmp,longTmp);
     }
-//    addWaypoint("tools",38.419060,-110.786316);
-//    addWaypoint("hammer",38.418397,-110.785769);
-//    addWaypoint("screwdriver",38.419357,-110.783796);
-//    addWaypoint("wrench",38.418494,-110.783336);
     
     for (int i = 0; i < waypoints.size(); i++)
     {
@@ -76,6 +72,49 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
 //    cout << "cv::namedindow()" << endl;
     cv::namedWindow("mainWindow",cv::WINDOW_AUTOSIZE);
 //    cout << "cv::namedindow() DONE" << endl;
+}
+
+void display::init(string mapImgFile, string radarImgFile, string waypointFile, string mapInitFile)
+{
+    mainBox = cv::Mat(660,1280,CV_8UC3,cv::Scalar(80,80,80));
+    mapBox = mainBox(cv::Rect(10,10,800, 640));
+    radarBox = mainBox(cv::Rect(820,10,450,450));
+    cv::Mat img = cv::imread(mapImgFile);
+    cv::pyrDown(img, img);
+    img.copyTo(mapBox);
+
+    radarBase = cv::imread(radarImgFile);
+    radarBase.copyTo(radarImg);
+    radarImg(cv::Rect(125,125,450,450)).copyTo(radarBox);
+    
+    // screenshot parameters
+    ifstream mpInitFile;
+    mpInitFile.open(mapInitFile.c_str());
+    double LATval,LONGval,ptX,ptY,dYdLAT,dXdLONG,dMeterdPixel; 
+    mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
+    cv::Point ptOrigin(ptX,ptY);
+    myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
+    
+    // add Waypoints
+    ifstream wayPtFile;
+    wayPtFile.open(waypointFile.c_str());
+    while (!wayPtFile.eof())
+    {
+	string name;
+	double latTmp;
+	double longTmp;
+	wayPtFile >> name >> latTmp >> longTmp;
+	addWaypoint(name.c_str(),latTmp,longTmp);
+    }
+    
+    for (int i = 0; i < waypoints.size(); i++)
+    {
+        waypoints[i].setCoordinates(myMap);
+    }
+    
+    roverPatch.make(myMap.getImage(), Point(30,30),30);
+   
+    cv::namedWindow("mainWindow",cv::WINDOW_AUTOSIZE);
 }
 
 void display::drawTriangle(Mat img, int base, int height, int angle, Point center, Scalar color)
