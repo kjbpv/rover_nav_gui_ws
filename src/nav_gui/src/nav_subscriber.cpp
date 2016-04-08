@@ -17,12 +17,12 @@ double magHeadingVal = 0;
 
 void navCallback(const rover_msgs::NavState::ConstPtr& stateMsg)
 {
-  latitudeVal = stateMsg->position[0];
-  longitudeVal = stateMsg->position[1];
-  magHeadingVal = stateMsg->phi;
+  latitudeVal = stateMsg->base_latitude;
+  longitudeVal = stateMsg->base_longitude;
+  magHeadingVal = stateMsg->psi*(180.0/3.14159);
 
 //  ROS_INFO("I heard: [ %f , %f , %f ]", stateMsg->position[0], stateMsg->position[1], stateMsg->phi);
-  ROS_INFO("I heard: [ %f , %f , %f ]", latitudeVal, longitudeVal, magHeadingVal);
+//  ROS_INFO("I heard: [ %f , %f , %f ]", latitudeVal, longitudeVal, magHeadingVal);
 }
 
 int main(int argc, char **argv)
@@ -37,10 +37,10 @@ int main(int argc, char **argv)
 
   // initialize GUI 
 
-  std::string mapFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/BYU_quad2.png";
+  std::string mapFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png";
   std::string radarFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/radar.png";
-  std::string waypointFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/waypoints.txt";
-  std::string mapInitFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/mapInit.txt";
+  std::string waypointFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt";
+  std::string mapInitFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt";
   display myDisplay(mapFile,radarFile,waypointFile,mapInitFile);
 
   while (ros::ok())

@@ -130,7 +130,7 @@ void display::updateDisplay()
     cv::imshow("mainWindow", mainBox);
 }
 
-void updateDisplayMini()
+void display::updateDisplayMini()
 {
 // For miniaturized GUI (lower screen resolutions)
     cv::Mat tmp;

@@ -66,7 +66,7 @@ void patch::make(cv::Mat baseImage, cv::Point coords)
 
 void patch::make(cv::Mat baseImage, cv::Point coords, int widthVal)
 {
-    std::cout << "patch::make()" << std::endl;
+//    std::cout << "patch::make()" << std::endl;
     coordinates = cv::Point(0,0);
     // set width
     if (widthVal%2 == 1)
@@ -78,7 +78,7 @@ void patch::make(cv::Mat baseImage, cv::Point coords, int widthVal)
     // check boundaries of baseImage to make sure that patch will fit
     int baseX = baseImage.cols-1;
     int baseY = baseImage.rows-1;
-    std:: cout << "Checking Patch Fit " << std::endl;
+//    std:: cout << "Checking Patch Fit " << std::endl;
     if (baseX - coords.x >= width/2) // not too far to the right
     {
         if (coords.x >= width/2 + 1) // not too far to the left
