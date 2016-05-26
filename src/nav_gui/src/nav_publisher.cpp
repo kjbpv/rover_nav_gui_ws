@@ -19,7 +19,7 @@ int main(int argc, char **argv)
   
   // file containing artificial GPS coordinates
   std::ifstream infile;
-  infile.open("/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/roverData.txt");
+  infile.open("/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/roverData.txt");
 
   int count = 0;
   while (ros::ok())

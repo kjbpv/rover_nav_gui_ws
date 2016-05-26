@@ -1,8 +1,8 @@
-prefix=/home/kyle/gitMars/ros_nav_gui_ws/devel
+prefix=/home/halrover/git/kyle/rover_nav_gui_ws/devel
 
 Name: rover_msgs
 Description: Description of rover_msgs
 Version: 0.0.0
-Cflags: -I/home/kyle/gitMars/ros_nav_gui_ws/devel/include
-Libs: -L/home/kyle/gitMars/ros_nav_gui_ws/devel/lib 
+Cflags: -I/home/halrover/git/kyle/rover_nav_gui_ws/devel/include
+Libs: -L/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib 
 Requires: 

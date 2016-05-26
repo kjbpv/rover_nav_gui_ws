@@ -7,8 +7,12 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/home/kyle/gitMars/nav_gui_ws/devel/lib/x86_64-linux-gnu:/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/kyle/gitMars/nav_gui_ws/devel/lib:/home/kyle/gitMars/ros_nav_gui_ws/devel/lib:/opt/ros/indigo/lib"
-export PKG_CONFIG_PATH="/home/kyle/gitMars/nav_gui_ws/devel/lib/x86_64-linux-gnu/pkgconfig:/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/kyle/gitMars/nav_gui_ws/devel/lib/pkgconfig:/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
-export PWD="/home/kyle/gitMars/ros_nav_gui_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/kyle/gitMars/ros_nav_gui_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/kyle/gitMars/ros_nav_gui_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks"
+export CMAKE_PREFIX_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel:$CMAKE_PREFIX_PATH"
+export CPATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/include:$CPATH"
+export LD_LIBRARY_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib:/home/halrover/git/rostesting/rover_ws/devel/lib:/opt/ros/indigo/lib"
+export PATH="/opt/ros/indigo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PKG_CONFIG_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/pkgconfig:/home/halrover/git/rostesting/rover_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
+export PWD="/home/halrover/git/kyle/rover_nav_gui_ws/build"
+export PYTHONPATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/src:$ROS_PACKAGE_PATH"

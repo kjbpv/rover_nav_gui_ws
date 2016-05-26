@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kyle/gitMars/ros_nav_gui_ws/devel/include/rover_msgs/NavState.h
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/include/rover_msgs/NavState.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/display.h
 iostream
 -
 opencv2/opencv.hpp
@@ -32,31 +32,31 @@ vector
 string.h
 -
 waypoint.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/waypoint.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/waypoint.h
 rover.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/rover.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/rover.h
 patch.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/patch.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/patch.h
 screenshot.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/screenshot.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/screenshot.h
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_subscriber.cpp
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/nav_subscriber.cpp
 ros/ros.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/ros/ros.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/ros/ros.h
 opencv2/opencv.hpp
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/opencv2/opencv.hpp
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/opencv2/opencv.hpp
 std_msgs/String.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/std_msgs/String.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/std_msgs/String.h
 rover_msgs/NavState.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/rover_msgs/NavState.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/rover_msgs/NavState.h
 waypoint.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/waypoint.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/waypoint.h
 rover.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/rover.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/rover.h
 screenshot.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/screenshot.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/screenshot.h
 display.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/display.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/display.h
 iostream
 -
 fstream
@@ -64,13 +64,13 @@ fstream
 ctime
 -
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/patch.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/patch.h
 iostream
 -
 opencv2/opencv.hpp
 -
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/rover.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/rover.h
 iostream
 -
 fstream
@@ -78,21 +78,21 @@ fstream
 string.h
 -
 waypoint.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/waypoint.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/waypoint.h
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/screenshot.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/screenshot.h
 iostream
 -
 opencv2/opencv.hpp
 -
 
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/waypoint.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/waypoint.h
 opencv2/opencv.hpp
 -
 iostream
 -
 screenshot.h
-/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/screenshot.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/screenshot.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

@@ -279,6 +279,23 @@ void display::drawRover()
     drawTriangle(myMap.getImage(), 6, 10, mRover.getAngle(), mRover.getCoordinates(), Scalar(0,255,0)); // rover
 }
 
+void display::drawRover(int dX, int dY)
+{
+//    cout << "display::drawRover()" << endl;
+    // draw patch to cover previous rover
+    roverPatch.redraw(myMap.getImage());
+
+    cv::Point coordinates(mRover.getCoordinates().x + dX, mRover.getCoordinates().y + dY);
+    // Take patch to cover up rover in next frame
+    roverPatch.make(myMap.getImage(), coordinates);
+    
+    // draw the rover triangle within the radar box
+    drawTriangle(radarBox, 20, 32, 0, Point(223,225), Scalar(255,255,255));
+    
+    // draw the rover triangle on the map screenshot
+    drawTriangle(myMap.getImage(), 6, 10, mRover.getAngle(), coordinates, Scalar(0,255,0)); // rover
+}
+
 double display::getDistance(waypoint p1, waypoint p2)
 {
 //    cout << "display::getDistance()" << endl;

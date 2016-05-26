@@ -17,7 +17,6 @@ float64 latitude
 float64 longitude
 
 float64 arrive_limit
-
 """
   __slots__ = ['latitude','longitude','arrive_limit']
   _slot_types = ['float64','float64','float64']
@@ -64,8 +63,8 @@ float64 arrive_limit
     try:
       _x = self
       buff.write(_struct_3d.pack(_x.latitude, _x.longitude, _x.arrive_limit))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
   def deserialize(self, str):
     """
@@ -92,8 +91,8 @@ float64 arrive_limit
     try:
       _x = self
       buff.write(_struct_3d.pack(_x.latitude, _x.longitude, _x.arrive_limit))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
   def deserialize_numpy(self, str, numpy):
     """

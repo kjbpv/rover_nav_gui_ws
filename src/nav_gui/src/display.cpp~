@@ -74,7 +74,7 @@ display::display(string mapImgFile, string radarImgFile, string waypointFile, st
 //    cout << "cv::namedindow() DONE" << endl;
 }
 
-void display::init(string mapImgFile, string radarImgFile, string waypointFile, string mapInitFile)
+void display::init(string mapImgFile, string radarImgFile, string waypointFile, string mapInitFile, int dX, int dY)
 {
     mainBox = cv::Mat(660,1280,CV_8UC3,cv::Scalar(80,80,80));
     mapBox = mainBox(cv::Rect(10,10,800, 640));
@@ -92,7 +92,7 @@ void display::init(string mapImgFile, string radarImgFile, string waypointFile, 
     mpInitFile.open(mapInitFile.c_str());
     double LATval,LONGval,ptX,ptY,dYdLAT,dXdLONG,dMeterdPixel; 
     mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
-    cv::Point ptOrigin(ptX,ptY);
+    cv::Point ptOrigin(ptX + dX,ptY + dY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     
     // add Waypoints
@@ -264,6 +264,23 @@ void display::drawWaypoints()
 }
 
 void display::drawRover()
+{
+//    cout << "display::drawRover()" << endl;
+    // draw patch to cover previous rover
+    roverPatch.redraw(myMap.getImage());
+    
+    // Take patch to cover up rover in next frame
+    roverPatch.make(myMap.getImage(), mRover.getCoordinates());
+    
+    // draw the rover triangle within the radar box
+    drawTriangle(radarBox, 20, 32, 0, Point(223,225), Scalar(255,255,255));
+    
+    cv::Point coordinates(mRover.getCoordinates());
+    // draw the rover triangle on the map screenshot
+    drawTriangle(myMap.getImage(), 6, 10, mRover.getAngle(), mRover.getCoordinates(), Scalar(0,255,0)); // rover
+}
+
+void display::drawRover(int dX, int dY)
 {
 //    cout << "display::drawRover()" << endl;
     // draw patch to cover previous rover

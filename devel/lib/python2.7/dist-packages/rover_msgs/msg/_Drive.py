@@ -15,7 +15,6 @@ uint16 rw
 uint16 pan
 uint16 tilt
 uint8 camnum
-
 """
   __slots__ = ['lw','rw','pan','tilt','camnum']
   _slot_types = ['uint16','uint16','uint16','uint16','uint8']
@@ -68,8 +67,8 @@ uint8 camnum
     try:
       _x = self
       buff.write(_struct_4HB.pack(_x.lw, _x.rw, _x.pan, _x.tilt, _x.camnum))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
   def deserialize(self, str):
     """
@@ -96,8 +95,8 @@ uint8 camnum
     try:
       _x = self
       buff.write(_struct_4HB.pack(_x.lw, _x.rw, _x.pan, _x.tilt, _x.camnum))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
   def deserialize_numpy(self, str, numpy):
     """

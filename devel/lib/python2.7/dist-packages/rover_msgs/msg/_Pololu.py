@@ -15,8 +15,7 @@ uint16 q2
 uint16 q3
 uint16 q4
 uint16 q5
-uint16 q6
-"""
+uint16 q6"""
   __slots__ = ['q1','q2','q3','q4','q5','q6']
   _slot_types = ['uint16','uint16','uint16','uint16','uint16','uint16']
 
@@ -71,8 +70,8 @@ uint16 q6
     try:
       _x = self
       buff.write(_struct_6H.pack(_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
   def deserialize(self, str):
     """
@@ -99,8 +98,8 @@ uint16 q6
     try:
       _x = self
       buff.write(_struct_6H.pack(_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
   def deserialize_numpy(self, str, numpy):
     """

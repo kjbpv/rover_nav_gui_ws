@@ -49,7 +49,7 @@ int main(int argc, char **argv)
     
     stateMsg.Vw = 0;
     stateMsg.theta = 0;
-//    stateMsg.psi = 0;
+    stateMsg.psi = (stateMsg.psi)*(3.14159/180.0);
     stateMsg.chi = 0;
     stateMsg.p = 0;
     stateMsg.q = 0;

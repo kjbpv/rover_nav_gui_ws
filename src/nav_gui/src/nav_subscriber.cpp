@@ -32,11 +32,11 @@ void navCallback(const rover_msgs::NavState::ConstPtr& stateMsg)
 // Mouse click callback
 void mouseCallBack(int event, int x, int y, int flags, void* userdata)
 {
-  if (event == cv::EVENT_LBUTTONDOWN)
+  if (event == cv::EVENT_MBUTTONDOWN)
   {
      mouseClickFlag = 1;
-     dX = x - 10;
-     dY = y - 10;
+     dX = dX + x - 10;
+     dY = dY + y - 10;
      std::cout << "X-Click: " << x << ", Y-Click: " << y << std::endl;
      // move rover to position indicated by click
   }
@@ -53,10 +53,10 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(10); // 10 Hz
 
   // initialize GUI 
-  std::string mapFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png";
-  std::string radarFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/radar.png";
-  std::string waypointFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt";
-  std::string mapInitFile = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt";
+  std::string mapFile = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png";
+  std::string radarFile = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/radar.png";
+  std::string waypointFile = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt";
+  std::string mapInitFile = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt";
   display myDisplay(mapFile,radarFile,waypointFile,mapInitFile);
 
   // click to place rover in that location
@@ -72,12 +72,12 @@ int main(int argc, char **argv)
           std::cout << "Click Coords: X: " << dX << ", Y: " << dY << std::endl;
 	  dX = dX - coords.x; // update offset values
 	  dY = dY - coords.y; // update offset values
-	  myDisplay.init(mapFile,radarFile,waypointFile,mapInitFile,dX,dY);
+	  //myDisplay.init(mapFile,radarFile,waypointFile,mapInitFile,dX,dY);
         }
         myDisplay.updateRover(latitudeVal,longitudeVal,magHeadingVal);
         myDisplay.rotateRadar();
         myDisplay.drawWaypoints();
-        myDisplay.drawRover();
+        myDisplay.drawRover(dX,dY);
         myDisplay.updateDisplay();
         cv::waitKey(1);
 	ros::spinOnce(); // catch the most recent message

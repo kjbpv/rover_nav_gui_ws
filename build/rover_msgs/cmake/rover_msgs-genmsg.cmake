@@ -2,7 +2,7 @@
 
 message(STATUS "rover_msgs: 6 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irover_msgs:/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,34 +15,34 @@ add_custom_target(rover_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
 add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg" ""
 )
 
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
 add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" ""
 )
 
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
 add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" ""
 )
 
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
 add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg" ""
 )
 
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
 add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" ""
 )
 
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
 add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rover_msgs" "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg" ""
 )
 
 #
@@ -52,37 +52,37 @@ add_custom_target(_rover_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_cpp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_cpp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_cpp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_cpp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_cpp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rover_msgs
@@ -102,17 +102,17 @@ add_custom_target(rover_msgs_generate_messages_cpp
 add_dependencies(rover_msgs_generate_messages rover_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_cpp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_cpp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_cpp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_cpp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_cpp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_cpp _rover_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -125,37 +125,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rover_msgs_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_lisp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_lisp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_lisp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_lisp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_lisp(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rover_msgs
@@ -175,17 +175,17 @@ add_custom_target(rover_msgs_generate_messages_lisp
 add_dependencies(rover_msgs_generate_messages rover_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_lisp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_lisp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_lisp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_lisp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_lisp _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_lisp _rover_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,37 +198,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rover_msgs_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_py(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_py(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_py(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_py(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_msgs
 )
 _generate_msg_py(rover_msgs
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rover_msgs
@@ -248,17 +248,17 @@ add_custom_target(rover_msgs_generate_messages_py
 add_dependencies(rover_msgs_generate_messages rover_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_py _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_py _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_py _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_py _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/Drive.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_py _rover_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg" NAME_WE)
 add_dependencies(rover_msgs_generate_messages_py _rover_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

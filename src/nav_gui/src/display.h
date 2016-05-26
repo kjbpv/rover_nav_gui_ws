@@ -37,6 +37,7 @@ public:
     void rotateRadar();
     void drawWaypoints();
     void drawRover();
+    void drawRover(int dX, int dY);
     double getDistance(waypoint p1, waypoint p2);
     double getAngle(waypoint p1, waypoint p2);
     void addWaypoint(string name, double latitude, double longitude);

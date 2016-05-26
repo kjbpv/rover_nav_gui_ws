@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui/CMakeFiles/progress.marks
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles 0
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui/CMakeFiles/progress.marks
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/clean
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/preinstall
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/preinstall
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/rule
 .PHONY : nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ _nav_gui_generate_messages_check_deps_Num: nav_gui/CMakeFiles/_nav_gui_generate_
 
 # fast build rule for target.
 _nav_gui_generate_messages_check_deps_Num/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build.make nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build.make nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build
 .PHONY : _nav_gui_generate_messages_check_deps_Num/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ geometry_msgs_generate_messages_cpp: nav_gui/CMakeFiles/geometry_msgs_generate_m
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ geometry_msgs_generate_messages_lisp: nav_gui/CMakeFiles/geometry_msgs_generate_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ geometry_msgs_generate_messages_py: nav_gui/CMakeFiles/geometry_msgs_generate_me
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ nav_gui_gencpp: nav_gui/CMakeFiles/nav_gui_gencpp.dir/rule
 
 # fast build rule for target.
 nav_gui_gencpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_gencpp.dir/build.make nav_gui/CMakeFiles/nav_gui_gencpp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_gencpp.dir/build.make nav_gui/CMakeFiles/nav_gui_gencpp.dir/build
 .PHONY : nav_gui_gencpp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_generate_messages.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -230,12 +230,12 @@ nav_gui_generate_messages: nav_gui/CMakeFiles/nav_gui_generate_messages.dir/rule
 
 # fast build rule for target.
 nav_gui_generate_messages/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages.dir/build
 .PHONY : nav_gui_generate_messages/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -244,12 +244,12 @@ nav_gui_generate_messages_cpp: nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.
 
 # fast build rule for target.
 nav_gui_generate_messages_cpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages_cpp.dir/build
 .PHONY : nav_gui_generate_messages_cpp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -258,12 +258,12 @@ nav_gui_generate_messages_lisp: nav_gui/CMakeFiles/nav_gui_generate_messages_lis
 
 # fast build rule for target.
 nav_gui_generate_messages_lisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages_lisp.dir/build
 .PHONY : nav_gui_generate_messages_lisp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -272,12 +272,12 @@ nav_gui_generate_messages_py: nav_gui/CMakeFiles/nav_gui_generate_messages_py.di
 
 # fast build rule for target.
 nav_gui_generate_messages_py/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/build.make nav_gui/CMakeFiles/nav_gui_generate_messages_py.dir/build
 .PHONY : nav_gui_generate_messages_py/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_genlisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_genlisp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_genlisp.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_genlisp.dir/rule
 
 # Convenience name for target.
@@ -286,12 +286,12 @@ nav_gui_genlisp: nav_gui/CMakeFiles/nav_gui_genlisp.dir/rule
 
 # fast build rule for target.
 nav_gui_genlisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_genlisp.dir/build.make nav_gui/CMakeFiles/nav_gui_genlisp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_genlisp.dir/build.make nav_gui/CMakeFiles/nav_gui_genlisp.dir/build
 .PHONY : nav_gui_genlisp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_gui_genpy.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_genpy.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_gui_genpy.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_gui_genpy.dir/rule
 
 # Convenience name for target.
@@ -300,12 +300,12 @@ nav_gui_genpy: nav_gui/CMakeFiles/nav_gui_genpy.dir/rule
 
 # fast build rule for target.
 nav_gui_genpy/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_genpy.dir/build.make nav_gui/CMakeFiles/nav_gui_genpy.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_gui_genpy.dir/build.make nav_gui/CMakeFiles/nav_gui_genpy.dir/build
 .PHONY : nav_gui_genpy/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_publisher.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_publisher.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_publisher.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_publisher.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/rule
 
 # fast build rule for target.
 nav_publisher/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/build
 .PHONY : nav_publisher/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/nav_subscriber.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_subscriber.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/nav_subscriber.dir/rule
 .PHONY : nav_gui/CMakeFiles/nav_subscriber.dir/rule
 
 # Convenience name for target.
@@ -328,12 +328,12 @@ nav_subscriber: nav_gui/CMakeFiles/nav_subscriber.dir/rule
 
 # fast build rule for target.
 nav_subscriber/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/build
 .PHONY : nav_subscriber/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -342,12 +342,12 @@ roscpp_generate_messages_cpp: nav_gui/CMakeFiles/roscpp_generate_messages_cpp.di
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -356,12 +356,12 @@ roscpp_generate_messages_lisp: nav_gui/CMakeFiles/roscpp_generate_messages_lisp.
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -370,12 +370,12 @@ roscpp_generate_messages_py: nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -384,12 +384,12 @@ rosgraph_msgs_generate_messages_cpp: nav_gui/CMakeFiles/rosgraph_msgs_generate_m
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -398,12 +398,12 @@ rosgraph_msgs_generate_messages_lisp: nav_gui/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -412,12 +412,12 @@ rosgraph_msgs_generate_messages_py: nav_gui/CMakeFiles/rosgraph_msgs_generate_me
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -426,12 +426,12 @@ sensor_msgs_generate_messages_cpp: nav_gui/CMakeFiles/sensor_msgs_generate_messa
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -440,12 +440,12 @@ sensor_msgs_generate_messages_lisp: nav_gui/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -454,7 +454,7 @@ sensor_msgs_generate_messages_py: nav_gui/CMakeFiles/sensor_msgs_generate_messag
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 src/display.o: src/display.cpp.o
@@ -462,7 +462,7 @@ src/display.o: src/display.cpp.o
 
 # target to build an object file
 src/display.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.o
 .PHONY : src/display.cpp.o
 
 src/display.i: src/display.cpp.i
@@ -470,7 +470,7 @@ src/display.i: src/display.cpp.i
 
 # target to preprocess a source file
 src/display.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.i
 .PHONY : src/display.cpp.i
 
 src/display.s: src/display.cpp.s
@@ -478,7 +478,7 @@ src/display.s: src/display.cpp.s
 
 # target to generate assembly for a file
 src/display.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/display.cpp.s
 .PHONY : src/display.cpp.s
 
 src/nav_publisher.o: src/nav_publisher.cpp.o
@@ -486,7 +486,7 @@ src/nav_publisher.o: src/nav_publisher.cpp.o
 
 # target to build an object file
 src/nav_publisher.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o
 .PHONY : src/nav_publisher.cpp.o
 
 src/nav_publisher.i: src/nav_publisher.cpp.i
@@ -494,7 +494,7 @@ src/nav_publisher.i: src/nav_publisher.cpp.i
 
 # target to preprocess a source file
 src/nav_publisher.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.i
 .PHONY : src/nav_publisher.cpp.i
 
 src/nav_publisher.s: src/nav_publisher.cpp.s
@@ -502,7 +502,7 @@ src/nav_publisher.s: src/nav_publisher.cpp.s
 
 # target to generate assembly for a file
 src/nav_publisher.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_publisher.dir/build.make nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.s
 .PHONY : src/nav_publisher.cpp.s
 
 src/nav_subscriber.o: src/nav_subscriber.cpp.o
@@ -510,7 +510,7 @@ src/nav_subscriber.o: src/nav_subscriber.cpp.o
 
 # target to build an object file
 src/nav_subscriber.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.o
 .PHONY : src/nav_subscriber.cpp.o
 
 src/nav_subscriber.i: src/nav_subscriber.cpp.i
@@ -518,7 +518,7 @@ src/nav_subscriber.i: src/nav_subscriber.cpp.i
 
 # target to preprocess a source file
 src/nav_subscriber.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.i
 .PHONY : src/nav_subscriber.cpp.i
 
 src/nav_subscriber.s: src/nav_subscriber.cpp.s
@@ -526,7 +526,7 @@ src/nav_subscriber.s: src/nav_subscriber.cpp.s
 
 # target to generate assembly for a file
 src/nav_subscriber.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/nav_subscriber.cpp.s
 .PHONY : src/nav_subscriber.cpp.s
 
 src/patch.o: src/patch.cpp.o
@@ -534,7 +534,7 @@ src/patch.o: src/patch.cpp.o
 
 # target to build an object file
 src/patch.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/patch.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/patch.cpp.o
 .PHONY : src/patch.cpp.o
 
 src/patch.i: src/patch.cpp.i
@@ -542,7 +542,7 @@ src/patch.i: src/patch.cpp.i
 
 # target to preprocess a source file
 src/patch.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/patch.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/patch.cpp.i
 .PHONY : src/patch.cpp.i
 
 src/patch.s: src/patch.cpp.s
@@ -550,7 +550,7 @@ src/patch.s: src/patch.cpp.s
 
 # target to generate assembly for a file
 src/patch.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/patch.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/patch.cpp.s
 .PHONY : src/patch.cpp.s
 
 src/rover.o: src/rover.cpp.o
@@ -558,7 +558,7 @@ src/rover.o: src/rover.cpp.o
 
 # target to build an object file
 src/rover.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/rover.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/rover.cpp.o
 .PHONY : src/rover.cpp.o
 
 src/rover.i: src/rover.cpp.i
@@ -566,7 +566,7 @@ src/rover.i: src/rover.cpp.i
 
 # target to preprocess a source file
 src/rover.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/rover.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/rover.cpp.i
 .PHONY : src/rover.cpp.i
 
 src/rover.s: src/rover.cpp.s
@@ -574,7 +574,7 @@ src/rover.s: src/rover.cpp.s
 
 # target to generate assembly for a file
 src/rover.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/rover.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/rover.cpp.s
 .PHONY : src/rover.cpp.s
 
 src/screenshot.o: src/screenshot.cpp.o
@@ -582,7 +582,7 @@ src/screenshot.o: src/screenshot.cpp.o
 
 # target to build an object file
 src/screenshot.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/screenshot.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/screenshot.cpp.o
 .PHONY : src/screenshot.cpp.o
 
 src/screenshot.i: src/screenshot.cpp.i
@@ -590,7 +590,7 @@ src/screenshot.i: src/screenshot.cpp.i
 
 # target to preprocess a source file
 src/screenshot.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/screenshot.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/screenshot.cpp.i
 .PHONY : src/screenshot.cpp.i
 
 src/screenshot.s: src/screenshot.cpp.s
@@ -598,7 +598,7 @@ src/screenshot.s: src/screenshot.cpp.s
 
 # target to generate assembly for a file
 src/screenshot.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/screenshot.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/screenshot.cpp.s
 .PHONY : src/screenshot.cpp.s
 
 src/waypoint.o: src/waypoint.cpp.o
@@ -606,7 +606,7 @@ src/waypoint.o: src/waypoint.cpp.o
 
 # target to build an object file
 src/waypoint.cpp.o:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/waypoint.cpp.o
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/waypoint.cpp.o
 .PHONY : src/waypoint.cpp.o
 
 src/waypoint.i: src/waypoint.cpp.i
@@ -614,7 +614,7 @@ src/waypoint.i: src/waypoint.cpp.i
 
 # target to preprocess a source file
 src/waypoint.cpp.i:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/waypoint.cpp.i
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/waypoint.cpp.i
 .PHONY : src/waypoint.cpp.i
 
 src/waypoint.s: src/waypoint.cpp.s
@@ -622,7 +622,7 @@ src/waypoint.s: src/waypoint.cpp.s
 
 # target to generate assembly for a file
 src/waypoint.cpp.s:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/waypoint.cpp.s
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/src/waypoint.cpp.s
 .PHONY : src/waypoint.cpp.s
 
 # Help Target
@@ -692,6 +692,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

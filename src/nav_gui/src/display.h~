@@ -29,7 +29,7 @@ public:
     ~display(){}
     void drawTriangle(cv::Mat img, int base, int height, int angle, cv::Point center, cv::Scalar color);
 
-    void init(string mapImageFile, string radarFile, string waypointFile, string mapInitFile);
+    void init(string mapImageFile, string radarFile, string waypointFile, string mapInitFile, int dX, int dY);
     void updateDisplay(); // displays entire GUI window
     void updateDisplayMini(); // displays entire GUI window in miniature size (for lower screen resolutions)
     void updateRover();

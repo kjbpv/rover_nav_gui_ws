@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp" "/home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp" "/home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,10 +21,10 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/kyle/gitMars/ros_nav_gui_ws/devel/include"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/include"
   "/usr/local/include/opencv"
   "/usr/local/include"
-  "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/include"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

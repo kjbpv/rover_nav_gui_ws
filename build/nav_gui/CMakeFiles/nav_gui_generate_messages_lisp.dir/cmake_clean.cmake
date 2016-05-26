@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/nav_gui_generate_messages_lisp"
-  "/home/kyle/gitMars/ros_nav_gui_ws/devel/share/common-lisp/ros/nav_gui/msg/Num.lisp"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/nav_gui/msg/Num.lisp"
 )
 
 # Per-language clean rules from dependency scanning.
