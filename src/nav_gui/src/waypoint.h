@@ -24,12 +24,15 @@ public:
     double getAngleFromRover();
     double getDistanceToRover();
     cv::Point getCoordinates();
+    cv::Point getOffset();
     
     void setLatitude(double val);
     void setLongitude(double val);
     void setCoordinates(screenshot myMap);
     void setCoordinates(cv::Point);
     void setCoordinates(int X, int Y);
+    void setOffset(cv::Point);
+    void setOffset(int X, int Y);
     void setX(int val);
     void setY(int val);
     void setTarget(bool val);
@@ -51,6 +54,7 @@ private:
     
     // X,Y coordinates in pixels
     cv::Point coordinates;
+    cv::Point offset; // reflects the offset between the point's calculated position and actual
 //    double angle;
     
 };

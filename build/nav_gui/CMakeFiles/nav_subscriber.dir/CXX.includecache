@@ -22,6 +22,20 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/display.cpp
+opencv2/opencv.hpp
+-
+stdio.h
+-
+iostream
+-
+fstream
+-
+string.h
+-
+display.h
+/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/display.h
+
 /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/display.h
 iostream
 -
@@ -236,6 +250,8 @@ set
 list
 -
 boost/shared_ptr.hpp
+-
+boost/make_shared.hpp
 -
 boost/weak_ptr.hpp
 -

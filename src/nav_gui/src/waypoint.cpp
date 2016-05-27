@@ -42,6 +42,11 @@ cv::Point waypoint::getCoordinates()
     return coordinates;
 }
 
+cv::Point waypoint::getOffset()
+{
+    return offset;
+}
+
 double waypoint::getAngleFromRover()
 {
     return angleFromRover;
@@ -65,6 +70,8 @@ void waypoint::setLongitude(double val)
 void waypoint::setCoordinates(screenshot myMap)
 {
     setCoordinates(myMap.calculateCoords(latitude, longitude));
+
+    coordinates = coordinates - offset;
 
     if (coordinates.x < 0)
     {
@@ -91,6 +98,18 @@ void waypoint::setCoordinates(screenshot myMap)
 void waypoint::setCoordinates(cv::Point coords)
 {
     coordinates = coords;
+
+}
+
+void waypoint::setOffset(cv::Point coords)
+{
+    offset = coords;
+
+}
+
+void waypoint::setOffset(int x, int y)
+{
+    offset = cv::Point(x,y);
 
 }
 
