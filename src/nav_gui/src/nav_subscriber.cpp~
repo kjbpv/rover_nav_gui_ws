@@ -116,6 +116,7 @@ int main(int argc, char **argv)
                 myDisplay.anchor.setCoordinates(myDisplay.myMap);
 
                 // clear window
+                myDisplay.reinit(mapPath);
                 
                 std::cout << "Anchor Coords: X: " << anchorCoords.x << ", Y: " << anchorCoords.y << std::endl;
                 std::cout << "Click Coords: X: " << dxAnchor << ", Y: " << dyAnchor << std::endl;

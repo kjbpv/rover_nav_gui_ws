@@ -46,8 +46,11 @@ CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
 include rover_msgs/CMakeFiles/rover_msgs_generate_messages_py.dir/progress.make
 
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Drive.py
+rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Chutes.py
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_SciFeedback.py
+rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_All.py
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavGoal.py
+rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_JointAngles.py
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Arm.py
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Pololu.py
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavState.py
@@ -59,51 +62,75 @@ rover_msgs/CMakeFiles/rover_msgs_generate_messages_py: /home/halrover/git/kyle/r
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/Drive"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
 
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Chutes.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Chutes.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Chutes.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/Chutes"
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Chutes.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
+
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_SciFeedback.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_SciFeedback.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/SciFeedback"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
 
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_All.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_All.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/All.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/All"
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/All.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
+
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavGoal.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavGoal.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/NavGoal"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
 
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_JointAngles.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_JointAngles.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/JointAngles.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/JointAngles"
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/JointAngles.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
+
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Arm.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Arm.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/Arm"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
 
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Pololu.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Pololu.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/Pololu"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
 
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavState.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavState.py: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rover_msgs/NavState"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg
 
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Drive.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Chutes.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_SciFeedback.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_All.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavGoal.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_JointAngles.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Arm.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Pololu.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/__init__.py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavState.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for rover_msgs"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg --initpy
 
 rover_msgs_generate_messages_py: rover_msgs/CMakeFiles/rover_msgs_generate_messages_py
 rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Drive.py
+rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Chutes.py
 rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_SciFeedback.py
+rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_All.py
 rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavGoal.py
+rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_JointAngles.py
 rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Arm.py
 rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Pololu.py
 rover_msgs_generate_messages_py: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavState.py

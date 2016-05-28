@@ -332,90 +332,6 @@ nav_subscriber/fast:
 .PHONY : nav_subscriber/fast
 
 # Convenience name for target.
-nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/build.make nav_gui/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
@@ -650,12 +566,6 @@ help:
 	@echo "... nav_publisher"
 	@echo "... nav_subscriber"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"

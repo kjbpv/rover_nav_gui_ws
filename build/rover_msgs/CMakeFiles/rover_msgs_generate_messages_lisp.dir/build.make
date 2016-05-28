@@ -46,8 +46,11 @@ CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
 include rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp.dir/progress.make
 
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Drive.lisp
+rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Chutes.lisp
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/SciFeedback.lisp
+rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/All.lisp
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavGoal.lisp
+rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/JointAngles.lisp
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Arm.lisp
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Pololu.lisp
 rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavState.lisp
@@ -58,40 +61,61 @@ rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp: /home/halrover/git/kyle
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/Drive.msg"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Drive.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
 
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Chutes.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Chutes.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Chutes.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/Chutes.msg"
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Chutes.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
+
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/SciFeedback.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/SciFeedback.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/SciFeedback.msg"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
 
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/All.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/All.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/All.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/All.msg"
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/All.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
+
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavGoal.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/NavGoal.msg"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavGoal.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
 
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/JointAngles.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/JointAngles.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/JointAngles.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/JointAngles.msg"
+	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/JointAngles.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
+
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Arm.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Arm.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/Arm.msg"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
 
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Pololu.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Pololu.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/Pololu.msg"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
 
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavState.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavState.lisp: /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from rover_msgs/NavState.msg"
 	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/NavState.msg -Irover_msgs:/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p rover_msgs -o /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg
 
 rover_msgs_generate_messages_lisp: rover_msgs/CMakeFiles/rover_msgs_generate_messages_lisp
 rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Drive.lisp
+rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Chutes.lisp
 rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/SciFeedback.lisp
+rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/All.lisp
 rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavGoal.lisp
+rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/JointAngles.lisp
 rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Arm.lisp
 rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/Pololu.lisp
 rover_msgs_generate_messages_lisp: /home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp/ros/rover_msgs/msg/NavState.lisp

@@ -1,8 +1,11 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/rover_msgs_generate_messages_py"
   "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Drive.py"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Chutes.py"
   "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_SciFeedback.py"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_All.py"
   "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavGoal.py"
+  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_JointAngles.py"
   "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Arm.py"
   "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_Pololu.py"
   "/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages/rover_msgs/msg/_NavState.py"

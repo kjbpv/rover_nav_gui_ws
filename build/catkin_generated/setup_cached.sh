@@ -9,9 +9,8 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel:$CMAKE_PREFIX_PATH"
 export CPATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/include:$CPATH"
-export LD_LIBRARY_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib:/home/halrover/git/rostesting/rover_ws/devel/lib:/opt/ros/indigo/lib"
-export PATH="/opt/ros/indigo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PKG_CONFIG_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/pkgconfig:/home/halrover/git/rostesting/rover_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
+export LD_LIBRARY_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/halrover/git/kyle/rover_nav_gui_ws/build"
 export PYTHONPATH="/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/halrover/git/kyle/rover_nav_gui_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"

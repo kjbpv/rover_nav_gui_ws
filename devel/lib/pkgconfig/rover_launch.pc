@@ -1,0 +1,8 @@
+prefix=/home/halrover/git/kyle/rover_nav_gui_ws/devel
+
+Name: rover_launch
+Description: Description of rover_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib 
+Requires: 

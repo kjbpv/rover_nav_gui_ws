@@ -111,7 +111,7 @@ void display::init(string mapImgFile, string radarImgFile, string waypointFile, 
 //    cout << "cv::namedindow() DONE" << endl;
 }
 
-void display::reinit(string mapImgFile, string radarImgFile, string waypointFile, string obstacleFile, string anchorPath, string mapInitFile)
+void display::reinit(string mapImgFile)
 {
     cv::Mat img = cv::imread(mapImgFile);
     cv::pyrDown(img, img);

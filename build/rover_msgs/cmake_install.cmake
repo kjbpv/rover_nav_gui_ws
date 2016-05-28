@@ -40,6 +40,9 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Arm.msg"
     "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/SciFeedback.msg"
     "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Pololu.msg"
+    "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/All.msg"
+    "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/Chutes.msg"
+    "/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg/JointAngles.msg"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
