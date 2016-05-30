@@ -57,6 +57,8 @@ class XBOX():
         self.sub2 = rospy.Subscriber('joy', Joy, self.joyCallback)
         self.sub3 = rospy.Subscriber('dynamixel_feedback', Float32MultiArray,self.dynCallback)
         self.sub4 = rospy.Subscriber('SetJointGoal', JointAngles, self.inversekin)
+		self.sub5 = rospy.Subscriber('/Astro_GUI_arm', JointAngles, self.astroArmCallback) #Kyle
+#	self.sub5 = rospy.Subscriber('/Astro_GUI_chutes', JointAngles, self.astroChutesCallback) #Kyle
         self.pub1 = rospy.Publisher('/rover_command', All, queue_size = 10)
         self.pub3 = rospy.Publisher('/mode', String, queue_size = 10)
         self.pub4 = rospy.Publisher('/dynamixel_command',Float32MultiArray,queue_size = 1)
@@ -77,6 +79,20 @@ class XBOX():
             print self.invkin.data
         print "3: "
         print self.invkin.data
+    
+    def astroArmCallback(self,msg) #Kyle
+		print "receiving command from astro_GUI (predefined states for astronaut assist). Updated values:"
+		self.cmd.q1 = msg.q[0]
+		self.cmd.q2 = msg.q[1]
+		self.cmd.q3 = msg.q[2]
+		self.cmd.q4 = msg.q[3]
+
+#    def astroChutesCallback(self,msg) #Kyle
+#	print "receiving command from astro_GUI (predefined states for astronaut assist). Updated values:"
+#	self.cmd.q1 = msg.q[0]
+#	self.cmd.q2 = msg.q[1]
+#	self.cmd.q3 = msg.q[2]
+#	self.cmd.q4 = msg.q[3]
 
     def polCallback(self,msg):
         self.q_fb.q1=msg.q1

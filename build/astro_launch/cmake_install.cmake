@@ -1,8 +1,8 @@
-# Install script for directory: /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_launch
+# Install script for directory: /home/kyle/gitMars/ros_nav_gui_ws/src/astro_launch
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/halrover/git/kyle/rover_nav_gui_ws/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/kyle/gitMars/ros_nav_gui_ws/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/halrover/git/kyle/rover_nav_gui_ws/build/astro_launch/catkin_generated/installspace/astro_launch.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kyle/gitMars/ros_nav_gui_ws/build/astro_launch/catkin_generated/installspace/astro_launch.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/astro_launch/cmake" TYPE FILE FILES
-    "/home/halrover/git/kyle/rover_nav_gui_ws/build/astro_launch/catkin_generated/installspace/astro_launchConfig.cmake"
-    "/home/halrover/git/kyle/rover_nav_gui_ws/build/astro_launch/catkin_generated/installspace/astro_launchConfig-version.cmake"
+    "/home/kyle/gitMars/ros_nav_gui_ws/build/astro_launch/catkin_generated/installspace/astro_launchConfig.cmake"
+    "/home/kyle/gitMars/ros_nav_gui_ws/build/astro_launch/catkin_generated/installspace/astro_launchConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/astro_launch" TYPE FILE FILES "/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_launch/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/astro_launch" TYPE FILE FILES "/home/kyle/gitMars/ros_nav_gui_ws/src/astro_launch/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

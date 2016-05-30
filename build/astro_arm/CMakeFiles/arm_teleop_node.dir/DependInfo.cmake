@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp" "/home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o"
+  "/home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp" "/home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,7 +21,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/include"
+  "/home/kyle/gitMars/ros_nav_gui_ws/devel/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

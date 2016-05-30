@@ -67,14 +67,14 @@ set(nav_gui_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(nav_gui_SOURCE_PREFIX /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui)
-  set(nav_gui_DEVEL_PREFIX /home/halrover/git/kyle/rover_nav_gui_ws/devel)
+  set(nav_gui_SOURCE_PREFIX /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui)
+  set(nav_gui_DEVEL_PREFIX /home/kyle/gitMars/ros_nav_gui_ws/devel)
   set(nav_gui_INSTALL_PREFIX "")
   set(nav_gui_PREFIX ${nav_gui_DEVEL_PREFIX})
 else()
   set(nav_gui_SOURCE_PREFIX "")
   set(nav_gui_DEVEL_PREFIX "")
-  set(nav_gui_INSTALL_PREFIX /home/halrover/git/kyle/rover_nav_gui_ws/install)
+  set(nav_gui_INSTALL_PREFIX /home/kyle/gitMars/ros_nav_gui_ws/install)
   set(nav_gui_PREFIX ${nav_gui_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(nav_gui_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/halrover/git/kyle/rover_nav_gui_ws/devel/include;/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/include " STREQUAL " ")
+if(NOT "/home/kyle/gitMars/ros_nav_gui_ws/devel/include;/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/include " STREQUAL " ")
   set(nav_gui_INCLUDE_DIRS "")
-  set(_include_dirs "/home/halrover/git/kyle/rover_nav_gui_ws/devel/include;/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/include")
+  set(_include_dirs "/home/kyle/gitMars/ros_nav_gui_ws/devel/include;/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/halrover/git/kyle/rover_nav_gui_ws/devel/include;/home/halrover/gi
         message(FATAL_ERROR "Project 'nav_gui' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'kyle <kylejbrown17@gmail.com>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'nav_gui' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/${idir}'.  Ask the maintainer 'kyle <kylejbrown17@gmail.com>' to fix it.")
+      message(FATAL_ERROR "Project 'nav_gui' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/${idir}'.  Ask the maintainer 'kyle <kylejbrown17@gmail.com>' to fix it.")
     endif()
     _list_append_unique(nav_gui_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib;/home/halrover/git/rostesting/rover_ws/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/kyle/gitMars/ros_nav_gui_ws/devel/lib;/home/kyle/gitMars/ros_nav_gui_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

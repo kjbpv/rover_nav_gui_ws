@@ -23,6 +23,7 @@ float32 Vg		# Groundspeed (m/s)
 float64 base_latitude   # Latitude [degrees]. Positive is north of equator; negative is south.
 float64 base_longitude  # Longitude [degrees]. Positive is east of prime meridian; negative is west.
 float64 base_altitude   # Altitude [m]. Positive is above the WGS 84 ellipsoid
+
 """
   __slots__ = ['position','Vw','phi','theta','psi','chi','p','q','r','Vg','base_latitude','base_longitude','base_altitude']
   _slot_types = ['float32[3]','float32','float32','float32','float32','float32','float32','float32','float32','float32','float64','float64','float64']
@@ -100,8 +101,8 @@ float64 base_altitude   # Altitude [m]. Positive is above the WGS 84 ellipsoid
       buff.write(_struct_3f.pack(*self.position))
       _x = self
       buff.write(_struct_9f3d.pack(_x.Vw, _x.phi, _x.theta, _x.psi, _x.chi, _x.p, _x.q, _x.r, _x.Vg, _x.base_latitude, _x.base_longitude, _x.base_altitude))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize(self, str):
     """
@@ -132,8 +133,8 @@ float64 base_altitude   # Altitude [m]. Positive is above the WGS 84 ellipsoid
       buff.write(self.position.tostring())
       _x = self
       buff.write(_struct_9f3d.pack(_x.Vw, _x.phi, _x.theta, _x.psi, _x.chi, _x.p, _x.q, _x.r, _x.Vg, _x.base_latitude, _x.base_longitude, _x.base_altitude))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize_numpy(self, str, numpy):
     """

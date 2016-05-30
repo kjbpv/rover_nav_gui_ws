@@ -10,7 +10,8 @@ class Chutes(genpy.Message):
   _md5sum = "735dabca75806217d50ebaff1a183d1b"
   _type = "rover_msgs/Chutes"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """uint16 chutes"""
+  _full_text = """uint16 chutes
+"""
   __slots__ = ['chutes']
   _slot_types = ['uint16']
 
@@ -49,8 +50,8 @@ class Chutes(genpy.Message):
     """
     try:
       buff.write(_struct_H.pack(self.chutes))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize(self, str):
     """
@@ -75,8 +76,8 @@ class Chutes(genpy.Message):
     """
     try:
       buff.write(_struct_H.pack(self.chutes))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize_numpy(self, str, numpy):
     """

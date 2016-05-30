@@ -7,7 +7,7 @@ import struct
 
 
 class Pololu(genpy.Message):
-  _md5sum = "ac5fbf005f58af0f7bba43c0569e8a47"
+  _md5sum = "981b3dedffc3376c9ed31b487f6742c3"
   _type = "rover_msgs/Pololu"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint16 q1
@@ -15,9 +15,11 @@ uint16 q2
 uint16 q3
 uint16 q4
 uint16 q5
-uint16 q6"""
-  __slots__ = ['q1','q2','q3','q4','q5','q6']
-  _slot_types = ['uint16','uint16','uint16','uint16','uint16','uint16']
+uint16 q6
+uint16 grip
+"""
+  __slots__ = ['q1','q2','q3','q4','q5','q6','grip']
+  _slot_types = ['uint16','uint16','uint16','uint16','uint16','uint16','uint16']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +29,7 @@ uint16 q6"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       q1,q2,q3,q4,q5,q6
+       q1,q2,q3,q4,q5,q6,grip
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -48,6 +50,8 @@ uint16 q6"""
         self.q5 = 0
       if self.q6 is None:
         self.q6 = 0
+      if self.grip is None:
+        self.grip = 0
     else:
       self.q1 = 0
       self.q2 = 0
@@ -55,6 +59,7 @@ uint16 q6"""
       self.q4 = 0
       self.q5 = 0
       self.q6 = 0
+      self.grip = 0
 
   def _get_types(self):
     """
@@ -69,9 +74,9 @@ uint16 q6"""
     """
     try:
       _x = self
-      buff.write(_struct_6H.pack(_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+      buff.write(_struct_7H.pack(_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6, _x.grip))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize(self, str):
     """
@@ -82,8 +87,8 @@ uint16 q6"""
       end = 0
       _x = self
       start = end
-      end += 12
-      (_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6,) = _struct_6H.unpack(str[start:end])
+      end += 14
+      (_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6, _x.grip,) = _struct_7H.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -97,9 +102,9 @@ uint16 q6"""
     """
     try:
       _x = self
-      buff.write(_struct_6H.pack(_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+      buff.write(_struct_7H.pack(_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6, _x.grip))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize_numpy(self, str, numpy):
     """
@@ -111,11 +116,11 @@ uint16 q6"""
       end = 0
       _x = self
       start = end
-      end += 12
-      (_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6,) = _struct_6H.unpack(str[start:end])
+      end += 14
+      (_x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6, _x.grip,) = _struct_7H.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_6H = struct.Struct("<6H")
+_struct_7H = struct.Struct("<7H")

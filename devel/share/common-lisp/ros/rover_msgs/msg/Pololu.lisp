@@ -36,6 +36,11 @@
     :reader q6
     :initarg :q6
     :type cl:fixnum
+    :initform 0)
+   (grip
+    :reader grip
+    :initarg :grip
+    :type cl:fixnum
     :initform 0))
 )
 
@@ -76,6 +81,11 @@
 (cl:defmethod q6-val ((m <Pololu>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover_msgs-msg:q6-val is deprecated.  Use rover_msgs-msg:q6 instead.")
   (q6 m))
+
+(cl:ensure-generic-function 'grip-val :lambda-list '(m))
+(cl:defmethod grip-val ((m <Pololu>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover_msgs-msg:grip-val is deprecated.  Use rover_msgs-msg:grip instead.")
+  (grip m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Pololu>) ostream)
   "Serializes a message object of type '<Pololu>"
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'q1)) ostream)
@@ -90,6 +100,8 @@
   (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'q5)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'q6)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'q6)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'grip)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'grip)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <Pololu>) istream)
   "Deserializes a message object of type '<Pololu>"
@@ -105,6 +117,8 @@
     (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'q5)) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'q6)) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'q6)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'grip)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'grip)) (cl:read-byte istream))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Pololu>)))
@@ -115,18 +129,19 @@
   "rover_msgs/Pololu")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Pololu>)))
   "Returns md5sum for a message object of type '<Pololu>"
-  "ac5fbf005f58af0f7bba43c0569e8a47")
+  "981b3dedffc3376c9ed31b487f6742c3")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Pololu)))
   "Returns md5sum for a message object of type 'Pololu"
-  "ac5fbf005f58af0f7bba43c0569e8a47")
+  "981b3dedffc3376c9ed31b487f6742c3")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Pololu>)))
   "Returns full string definition for message of type '<Pololu>"
-  (cl:format cl:nil "uint16 q1~%uint16 q2~%uint16 q3~%uint16 q4~%uint16 q5~%uint16 q6~%~%"))
+  (cl:format cl:nil "uint16 q1~%uint16 q2~%uint16 q3~%uint16 q4~%uint16 q5~%uint16 q6~%uint16 grip~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Pololu)))
   "Returns full string definition for message of type 'Pololu"
-  (cl:format cl:nil "uint16 q1~%uint16 q2~%uint16 q3~%uint16 q4~%uint16 q5~%uint16 q6~%~%"))
+  (cl:format cl:nil "uint16 q1~%uint16 q2~%uint16 q3~%uint16 q4~%uint16 q5~%uint16 q6~%uint16 grip~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Pololu>))
   (cl:+ 0
+     2
      2
      2
      2
@@ -143,4 +158,5 @@
     (cl:cons ':q4 (q4 msg))
     (cl:cons ':q5 (q5 msg))
     (cl:cons ':q6 (q6 msg))
+    (cl:cons ':grip (grip msg))
 ))

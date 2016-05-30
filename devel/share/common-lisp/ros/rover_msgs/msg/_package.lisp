@@ -1,23 +1,23 @@
 (cl:defpackage rover_msgs-msg
   (:use )
   (:export
-   "<SCIFEEDBACK>"
-   "SCIFEEDBACK"
    "<POLOLU>"
    "POLOLU"
-   "<CHUTES>"
-   "CHUTES"
-   "<NAVGOAL>"
-   "NAVGOAL"
    "<DRIVE>"
    "DRIVE"
-   "<ALL>"
-   "ALL"
    "<NAVSTATE>"
    "NAVSTATE"
+   "<CHUTES>"
+   "CHUTES"
    "<JOINTANGLES>"
    "JOINTANGLES"
    "<ARM>"
    "ARM"
+   "<SCIFEEDBACK>"
+   "SCIFEEDBACK"
+   "<NAVGOAL>"
+   "NAVGOAL"
+   "<ALL>"
+   "ALL"
   ))
 

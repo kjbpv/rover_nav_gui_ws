@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 # Include any dependencies generated for this target.
 include astro_arm/CMakeFiles/arm_teleop_node.dir/depend.make
@@ -50,18 +50,18 @@ include astro_arm/CMakeFiles/arm_teleop_node.dir/progress.make
 include astro_arm/CMakeFiles/arm_teleop_node.dir/flags.make
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o: astro_arm/CMakeFiles/arm_teleop_node.dir/flags.make
-astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o: /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o -c /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o -c /home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.i"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp > CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.i
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp > CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.i
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.s"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp -o CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.s
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm/src/armteleop_node.cpp -o CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.s
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o.requires:
 .PHONY : astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o.requires
@@ -79,41 +79,41 @@ arm_teleop_node_OBJECTS = \
 # External object files for target arm_teleop_node
 arm_teleop_node_EXTERNAL_OBJECTS =
 
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/build.make
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libroscpp.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librosconsole.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/liblog4cxx.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librostime.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libcpp_common.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/arm_teleop_node.dir/link.txt --verbose=$(VERBOSE)
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/build.make
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libroscpp.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librosconsole.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/liblog4cxx.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/librostime.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /opt/ros/indigo/lib/libcpp_common.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node"
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/arm_teleop_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-astro_arm/CMakeFiles/arm_teleop_node.dir/build: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node
+astro_arm/CMakeFiles/arm_teleop_node.dir/build: /home/kyle/gitMars/ros_nav_gui_ws/devel/lib/astro_arm/arm_teleop_node
 .PHONY : astro_arm/CMakeFiles/arm_teleop_node.dir/build
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/requires: astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o.requires
 .PHONY : astro_arm/CMakeFiles/arm_teleop_node.dir/requires
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm && $(CMAKE_COMMAND) -P CMakeFiles/arm_teleop_node.dir/cmake_clean.cmake
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm && $(CMAKE_COMMAND) -P CMakeFiles/arm_teleop_node.dir/cmake_clean.cmake
 .PHONY : astro_arm/CMakeFiles/arm_teleop_node.dir/clean
 
 astro_arm/CMakeFiles/arm_teleop_node.dir/depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/halrover/git/kyle/rover_nav_gui_ws/src /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm /home/halrover/git/kyle/rover_nav_gui_ws/build /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm/CMakeFiles/arm_teleop_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kyle/gitMars/ros_nav_gui_ws/src /home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm /home/kyle/gitMars/ros_nav_gui_ws/build /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm/CMakeFiles/arm_teleop_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : astro_arm/CMakeFiles/arm_teleop_node.dir/depend
 

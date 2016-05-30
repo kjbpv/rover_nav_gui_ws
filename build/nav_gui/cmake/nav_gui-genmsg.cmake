@@ -2,7 +2,7 @@
 
 message(STATUS "nav_gui: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Inav_gui:/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Inav_gui:/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,9 +15,9 @@ add_custom_target(nav_gui_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
+get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
 add_custom_target(_nav_gui_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "nav_gui" "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "nav_gui" "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg" ""
 )
 
 #
@@ -27,7 +27,7 @@ add_custom_target(_nav_gui_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(nav_gui
-  "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg"
+  "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/nav_gui
@@ -47,7 +47,7 @@ add_custom_target(nav_gui_generate_messages_cpp
 add_dependencies(nav_gui_generate_messages nav_gui_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
+get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
 add_dependencies(nav_gui_generate_messages_cpp _nav_gui_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -60,7 +60,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS nav_gui_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(nav_gui
-  "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg"
+  "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/nav_gui
@@ -80,7 +80,7 @@ add_custom_target(nav_gui_generate_messages_lisp
 add_dependencies(nav_gui_generate_messages nav_gui_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
+get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
 add_dependencies(nav_gui_generate_messages_lisp _nav_gui_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -93,7 +93,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS nav_gui_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(nav_gui
-  "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg"
+  "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/nav_gui
@@ -113,7 +113,7 @@ add_custom_target(nav_gui_generate_messages_py
 add_dependencies(nav_gui_generate_messages nav_gui_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
+get_filename_component(_filename "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/msg/Num.msg" NAME_WE)
 add_dependencies(nav_gui_generate_messages_py _nav_gui_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

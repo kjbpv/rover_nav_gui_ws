@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/nav_gui_generate_messages_cpp"
-  "/home/halrover/git/kyle/rover_nav_gui_ws/devel/include/nav_gui/Num.h"
+  "/home/kyle/gitMars/ros_nav_gui_ws/devel/include/nav_gui/Num.h"
 )
 
 # Per-language clean rules from dependency scanning.

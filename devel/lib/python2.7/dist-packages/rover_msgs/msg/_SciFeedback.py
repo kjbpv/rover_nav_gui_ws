@@ -12,6 +12,7 @@ class SciFeedback(genpy.Message):
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint16 temp
 uint16 humidity
+
 """
   __slots__ = ['temp','humidity']
   _slot_types = ['uint16','uint16']
@@ -55,8 +56,8 @@ uint16 humidity
     try:
       _x = self
       buff.write(_struct_2H.pack(_x.temp, _x.humidity))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize(self, str):
     """
@@ -83,8 +84,8 @@ uint16 humidity
     try:
       _x = self
       buff.write(_struct_2H.pack(_x.temp, _x.humidity))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize_numpy(self, str, numpy):
     """

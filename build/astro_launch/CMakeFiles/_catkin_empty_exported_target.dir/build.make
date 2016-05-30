@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -56,10 +56,10 @@ astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_e
 .PHONY : astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_launch && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_launch && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/halrover/git/kyle/rover_nav_gui_ws/src /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_launch /home/halrover/git/kyle/rover_nav_gui_ws/build /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_launch /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kyle/gitMars/ros_nav_gui_ws/src /home/kyle/gitMars/ros_nav_gui_ws/src/astro_launch /home/kyle/gitMars/ros_nav_gui_ws/build /home/kyle/gitMars/ros_nav_gui_ws/build/astro_launch /home/kyle/gitMars/ros_nav_gui_ws/build/astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : astro_launch/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

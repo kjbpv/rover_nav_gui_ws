@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,9 +120,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -161,6 +161,19 @@ clean_test_results: cmake_check_build_system
 clean_test_results/fast:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
 .PHONY : clean_test_results/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_Project
+
+# Build rule for target.
+clean_test_results_Project: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_Project
+.PHONY : clean_test_results_Project
+
+# fast build rule for target.
+clean_test_results_Project/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results_Project.dir/build.make CMakeFiles/clean_test_results_Project.dir/build
+.PHONY : clean_test_results_Project/fast
 
 #=============================================================================
 # Target rules for targets named download_extra_data
@@ -592,17 +605,30 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named _nav_gui_generate_messages_check_deps_Num
+# Target rules for targets named astroGUI
 
 # Build rule for target.
-_nav_gui_generate_messages_check_deps_Num: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _nav_gui_generate_messages_check_deps_Num
-.PHONY : _nav_gui_generate_messages_check_deps_Num
+astroGUI: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astroGUI
+.PHONY : astroGUI
 
 # fast build rule for target.
-_nav_gui_generate_messages_check_deps_Num/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build.make nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build
-.PHONY : _nav_gui_generate_messages_check_deps_Num/fast
+astroGUI/fast:
+	$(MAKE) -f astro_gui/CMakeFiles/astroGUI.dir/build.make astro_gui/CMakeFiles/astroGUI.dir/build
+.PHONY : astroGUI/fast
+
+#=============================================================================
+# Target rules for targets named astroGUI_small
+
+# Build rule for target.
+astroGUI_small: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 astroGUI_small
+.PHONY : astroGUI_small
+
+# fast build rule for target.
+astroGUI_small/fast:
+	$(MAKE) -f astro_gui/CMakeFiles/astroGUI_small.dir/build.make astro_gui/CMakeFiles/astroGUI_small.dir/build
+.PHONY : astroGUI_small/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
@@ -614,7 +640,7 @@ geometry_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f astro_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make astro_gui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -627,7 +653,7 @@ geometry_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f astro_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make astro_gui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -640,8 +666,60 @@ geometry_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	$(MAKE) -f astro_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make astro_gui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f astro_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make astro_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f astro_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make astro_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f astro_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make astro_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _nav_gui_generate_messages_check_deps_Num
+
+# Build rule for target.
+_nav_gui_generate_messages_check_deps_Num: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _nav_gui_generate_messages_check_deps_Num
+.PHONY : _nav_gui_generate_messages_check_deps_Num
+
+# fast build rule for target.
+_nav_gui_generate_messages_check_deps_Num/fast:
+	$(MAKE) -f nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build.make nav_gui/CMakeFiles/_nav_gui_generate_messages_check_deps_Num.dir/build
+.PHONY : _nav_gui_generate_messages_check_deps_Num/fast
 
 #=============================================================================
 # Target rules for targets named nav_gui_gencpp
@@ -760,45 +838,6 @@ nav_subscriber/fast:
 	$(MAKE) -f nav_gui/CMakeFiles/nav_subscriber.dir/build.make nav_gui/CMakeFiles/nav_subscriber.dir/build
 .PHONY : nav_subscriber/fast
 
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make nav_gui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -806,6 +845,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... clean_test_results"
+	@echo "... clean_test_results_Project"
 	@echo "... download_extra_data"
 	@echo "... doxygen"
 	@echo "... edit_cache"
@@ -846,10 +886,15 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... _nav_gui_generate_messages_check_deps_Num"
+	@echo "... astroGUI"
+	@echo "... astroGUI_small"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... _nav_gui_generate_messages_check_deps_Num"
 	@echo "... nav_gui_gencpp"
 	@echo "... nav_gui_generate_messages"
 	@echo "... nav_gui_generate_messages_cpp"
@@ -859,9 +904,6 @@ help:
 	@echo "... nav_gui_genpy"
 	@echo "... nav_publisher"
 	@echo "... nav_subscriber"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 .PHONY : help
 
 

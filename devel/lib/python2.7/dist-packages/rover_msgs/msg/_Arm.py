@@ -11,7 +11,8 @@ class Arm(genpy.Message):
   _type = "rover_msgs/Arm"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint16 tur
-uint16 sh"""
+uint16 sh
+"""
   __slots__ = ['tur','sh']
   _slot_types = ['uint16','uint16']
 
@@ -54,8 +55,8 @@ uint16 sh"""
     try:
       _x = self
       buff.write(_struct_2H.pack(_x.tur, _x.sh))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize(self, str):
     """
@@ -82,8 +83,8 @@ uint16 sh"""
     try:
       _x = self
       buff.write(_struct_2H.pack(_x.tur, _x.sh))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize_numpy(self, str, numpy):
     """

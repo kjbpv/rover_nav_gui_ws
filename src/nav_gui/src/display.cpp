@@ -32,8 +32,6 @@ void display::init(string mapImgFile, string radarImgFile, string waypointFile, 
     cv::pyrDown(img, img);
     img.copyTo(mapBox);
 
-//    std::cout << "cols: " << img.cols << ", rows: " << img.rows << std::endl; 
-    
     radarBase = cv::imread(radarImgFile);
     radarBase.copyTo(radarImg);
     radarImg(cv::Rect(125,125,450,450)).copyTo(radarBox);
@@ -50,9 +48,8 @@ void display::init(string mapImgFile, string radarImgFile, string waypointFile, 
 //    double dYdLAT = -424443.706409723/2.0;
 //    double dXdLONG = 333722.798305457/2.0;
 //    double dMeterdPixel = 50.0/190.0;
-    
+
     mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
-//    std::cout << "LATval: " << LATval << ", LONGval: " << LONGval << " , ptX: " << ptX << " , ptY: " << ptY << " , dYdLAT: " << dYdLAT << " , dXdLONG: " << dXdLONG << " dMdPix: " << dMeterdPixel << std::endl;
     cv::Point ptOrigin(ptX,ptY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     
@@ -243,12 +240,9 @@ void display::updateRover()
 
     // Read in rover data from file
     mRover.readData();
-    
     // Convert magheading to angle value
     mRover.setAngle(mRover.getMagHeading());
-    
     // Calculate rover coordinates based on screenshot parameters
-    
     mRover.setCoordinates(myMap);
 }
 

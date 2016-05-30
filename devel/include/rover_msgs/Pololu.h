@@ -29,7 +29,8 @@ struct Pololu_
     , q3(0)
     , q4(0)
     , q5(0)
-    , q6(0)  {
+    , q6(0)
+    , grip(0)  {
     }
   Pololu_(const ContainerAllocator& _alloc)
     : q1(0)
@@ -37,7 +38,8 @@ struct Pololu_
     , q3(0)
     , q4(0)
     , q5(0)
-    , q6(0)  {
+    , q6(0)
+    , grip(0)  {
     }
 
 
@@ -59,6 +61,9 @@ struct Pololu_
 
    typedef uint16_t _q6_type;
   _q6_type q6;
+
+   typedef uint16_t _grip_type;
+  _grip_type grip;
 
 
 
@@ -94,7 +99,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg'], 'rover_msgs': ['/home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs/msg']}
+// {'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg'], 'rover_msgs': ['/home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs/msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -137,12 +142,12 @@ struct MD5Sum< ::rover_msgs::Pololu_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "ac5fbf005f58af0f7bba43c0569e8a47";
+    return "981b3dedffc3376c9ed31b487f6742c3";
   }
 
   static const char* value(const ::rover_msgs::Pololu_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xac5fbf005f58af0fULL;
-  static const uint64_t static_value2 = 0x7bba43c0569e8a47ULL;
+  static const uint64_t static_value1 = 0x981b3dedffc3376cULL;
+  static const uint64_t static_value2 = 0x9ed31b487f6742c3ULL;
 };
 
 template<class ContainerAllocator>
@@ -167,6 +172,7 @@ uint16 q3\n\
 uint16 q4\n\
 uint16 q5\n\
 uint16 q6\n\
+uint16 grip\n\
 ";
   }
 
@@ -191,6 +197,7 @@ namespace serialization
       stream.next(m.q4);
       stream.next(m.q5);
       stream.next(m.q6);
+      stream.next(m.grip);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -221,6 +228,8 @@ struct Printer< ::rover_msgs::Pololu_<ContainerAllocator> >
     Printer<uint16_t>::stream(s, indent + "  ", v.q5);
     s << indent << "q6: ";
     Printer<uint16_t>::stream(s, indent + "  ", v.q6);
+    s << indent << "grip: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.grip);
   }
 };
 

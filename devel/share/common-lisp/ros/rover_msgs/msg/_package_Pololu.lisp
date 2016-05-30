@@ -11,4 +11,6 @@
           Q5
           Q6-VAL
           Q6
+          GRIP-VAL
+          GRIP
 ))

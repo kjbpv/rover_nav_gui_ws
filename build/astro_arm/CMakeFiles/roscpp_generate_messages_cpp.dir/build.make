@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 # Utility rule file for roscpp_generate_messages_cpp.
 
@@ -56,10 +56,10 @@ astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/build: roscpp_generate_mes
 .PHONY : astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 
 astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/halrover/git/kyle/rover_nav_gui_ws/src /home/halrover/git/kyle/rover_nav_gui_ws/src/astro_arm /home/halrover/git/kyle/rover_nav_gui_ws/build /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kyle/gitMars/ros_nav_gui_ws/src /home/kyle/gitMars/ros_nav_gui_ws/src/astro_arm /home/kyle/gitMars/ros_nav_gui_ws/build /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 # Include any dependencies generated for this target.
 include nav_gui/CMakeFiles/nav_publisher.dir/depend.make
@@ -50,18 +50,18 @@ include nav_gui/CMakeFiles/nav_publisher.dir/progress.make
 include nav_gui/CMakeFiles/nav_publisher.dir/flags.make
 
 nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o: nav_gui/CMakeFiles/nav_publisher.dir/flags.make
-nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o: /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o: /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o -c /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o -c /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp
 
 nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.i"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp > CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.i
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp > CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.i
 
 nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.s"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp -o CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.s
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/src/nav_publisher.cpp -o CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.s
 
 nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o.requires:
 .PHONY : nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o.requires
@@ -79,41 +79,41 @@ nav_publisher_OBJECTS = \
 # External object files for target nav_publisher
 nav_publisher_EXTERNAL_OBJECTS =
 
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/build.make
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libroscpp.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librosconsole.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/liblog4cxx.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librostime.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libcpp_common.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher"
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nav_publisher.dir/link.txt --verbose=$(VERBOSE)
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/build.make
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libroscpp.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librosconsole.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/liblog4cxx.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/librostime.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /opt/ros/indigo/lib/libcpp_common.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher: nav_gui/CMakeFiles/nav_publisher.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher"
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nav_publisher.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-nav_gui/CMakeFiles/nav_publisher.dir/build: /home/halrover/git/kyle/rover_nav_gui_ws/devel/lib/nav_gui/nav_publisher
+nav_gui/CMakeFiles/nav_publisher.dir/build: /home/kyle/gitMars/ros_nav_gui_ws/devel/lib/nav_gui/nav_publisher
 .PHONY : nav_gui/CMakeFiles/nav_publisher.dir/build
 
 nav_gui/CMakeFiles/nav_publisher.dir/requires: nav_gui/CMakeFiles/nav_publisher.dir/src/nav_publisher.cpp.o.requires
 .PHONY : nav_gui/CMakeFiles/nav_publisher.dir/requires
 
 nav_gui/CMakeFiles/nav_publisher.dir/clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui && $(CMAKE_COMMAND) -P CMakeFiles/nav_publisher.dir/cmake_clean.cmake
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui && $(CMAKE_COMMAND) -P CMakeFiles/nav_publisher.dir/cmake_clean.cmake
 .PHONY : nav_gui/CMakeFiles/nav_publisher.dir/clean
 
 nav_gui/CMakeFiles/nav_publisher.dir/depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/halrover/git/kyle/rover_nav_gui_ws/src /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui /home/halrover/git/kyle/rover_nav_gui_ws/build /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui/CMakeFiles/nav_publisher.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kyle/gitMars/ros_nav_gui_ws/src /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui /home/kyle/gitMars/ros_nav_gui_ws/build /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui/CMakeFiles/nav_publisher.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : nav_gui/CMakeFiles/nav_publisher.dir/depend
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 # Utility rule file for rover_msgs_genlisp.
 
@@ -56,10 +56,10 @@ rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/build: rover_msgs_genlisp
 .PHONY : rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/build
 
 rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs && $(CMAKE_COMMAND) -P CMakeFiles/rover_msgs_genlisp.dir/cmake_clean.cmake
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/rover_msgs && $(CMAKE_COMMAND) -P CMakeFiles/rover_msgs_genlisp.dir/cmake_clean.cmake
 .PHONY : rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/clean
 
 rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/halrover/git/kyle/rover_nav_gui_ws/src /home/halrover/git/kyle/rover_nav_gui_ws/src/rover_msgs /home/halrover/git/kyle/rover_nav_gui_ws/build /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs /home/halrover/git/kyle/rover_nav_gui_ws/build/rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kyle/gitMars/ros_nav_gui_ws/src /home/kyle/gitMars/ros_nav_gui_ws/src/rover_msgs /home/kyle/gitMars/ros_nav_gui_ws/build /home/kyle/gitMars/ros_nav_gui_ws/build/rover_msgs /home/kyle/gitMars/ros_nav_gui_ws/build/rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rover_msgs/CMakeFiles/rover_msgs_genlisp.dir/depend
 

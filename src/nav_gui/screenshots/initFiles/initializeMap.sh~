@@ -19,5 +19,5 @@ cp $myPath/$mapFolder/mapInit.txt $myPath/mapInit.txt
 cp $myPath/$mapFolder/roverData.txt $myPath/roverData.txt
 
 # create text file containing appropriate arguments for nav_subscriber
-echo $myPath/image.png $myPath/waypoints.txt $myPath/mapInit.txt $myPath/roverData.txt >> myData.txt
+#echo $myPath/image.png $myPath/waypoints.txt $myPath/mapInit.txt $myPath/roverData.txt >> myData.txt
 

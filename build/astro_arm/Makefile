@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles /home/halrover/git/kyle/rover_nav_gui_ws/build/astro_arm/CMakeFiles/progress.marks
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/halrover/git/kyle/rover_nav_gui_ws/build/CMakeFiles 0
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles /home/kyle/gitMars/ros_nav_gui_ws/build/astro_arm/CMakeFiles/progress.marks
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kyle/gitMars/ros_nav_gui_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/clean
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/preinstall
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/preinstall
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 astro_arm/CMakeFiles/arm_teleop_node.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/arm_teleop_node.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/arm_teleop_node.dir/rule
 .PHONY : astro_arm/CMakeFiles/arm_teleop_node.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ arm_teleop_node: astro_arm/CMakeFiles/arm_teleop_node.dir/rule
 
 # fast build rule for target.
 arm_teleop_node/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/build
 .PHONY : arm_teleop_node/fast
 
 # Convenience name for target.
 astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ roscpp_generate_messages_cpp: astro_arm/CMakeFiles/roscpp_generate_messages_cpp.
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make astro_arm/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ roscpp_generate_messages_lisp: astro_arm/CMakeFiles/roscpp_generate_messages_lis
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make astro_arm/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ roscpp_generate_messages_py: astro_arm/CMakeFiles/roscpp_generate_messages_py.di
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/build.make astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/build.make astro_arm/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ rosgraph_msgs_generate_messages_cpp: astro_arm/CMakeFiles/rosgraph_msgs_generate
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -230,12 +230,12 @@ rosgraph_msgs_generate_messages_lisp: astro_arm/CMakeFiles/rosgraph_msgs_generat
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f CMakeFiles/Makefile2 astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -244,7 +244,7 @@ rosgraph_msgs_generate_messages_py: astro_arm/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make astro_arm/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 src/armteleop_node.o: src/armteleop_node.cpp.o
@@ -252,7 +252,7 @@ src/armteleop_node.o: src/armteleop_node.cpp.o
 
 # target to build an object file
 src/armteleop_node.cpp.o:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.o
 .PHONY : src/armteleop_node.cpp.o
 
 src/armteleop_node.i: src/armteleop_node.cpp.i
@@ -260,7 +260,7 @@ src/armteleop_node.i: src/armteleop_node.cpp.i
 
 # target to preprocess a source file
 src/armteleop_node.cpp.i:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.i
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.i
 .PHONY : src/armteleop_node.cpp.i
 
 src/armteleop_node.s: src/armteleop_node.cpp.s
@@ -268,7 +268,7 @@ src/armteleop_node.s: src/armteleop_node.cpp.s
 
 # target to generate assembly for a file
 src/armteleop_node.cpp.s:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.s
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(MAKE) -f astro_arm/CMakeFiles/arm_teleop_node.dir/build.make astro_arm/CMakeFiles/arm_teleop_node.dir/src/armteleop_node.cpp.s
 .PHONY : src/armteleop_node.cpp.s
 
 # Help Target
@@ -305,6 +305,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/src
+CMAKE_SOURCE_DIR = /home/kyle/gitMars/ros_nav_gui_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/halrover/git/kyle/rover_nav_gui_ws/build
+CMAKE_BINARY_DIR = /home/kyle/gitMars/ros_nav_gui_ws/build
 
 # Utility rule file for nav_gui_gencpp.
 
@@ -56,10 +56,10 @@ nav_gui/CMakeFiles/nav_gui_gencpp.dir/build: nav_gui_gencpp
 .PHONY : nav_gui/CMakeFiles/nav_gui_gencpp.dir/build
 
 nav_gui/CMakeFiles/nav_gui_gencpp.dir/clean:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui && $(CMAKE_COMMAND) -P CMakeFiles/nav_gui_gencpp.dir/cmake_clean.cmake
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui && $(CMAKE_COMMAND) -P CMakeFiles/nav_gui_gencpp.dir/cmake_clean.cmake
 .PHONY : nav_gui/CMakeFiles/nav_gui_gencpp.dir/clean
 
 nav_gui/CMakeFiles/nav_gui_gencpp.dir/depend:
-	cd /home/halrover/git/kyle/rover_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/halrover/git/kyle/rover_nav_gui_ws/src /home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui /home/halrover/git/kyle/rover_nav_gui_ws/build /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui /home/halrover/git/kyle/rover_nav_gui_ws/build/nav_gui/CMakeFiles/nav_gui_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kyle/gitMars/ros_nav_gui_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kyle/gitMars/ros_nav_gui_ws/src /home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui /home/kyle/gitMars/ros_nav_gui_ws/build /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui /home/kyle/gitMars/ros_nav_gui_ws/build/nav_gui/CMakeFiles/nav_gui_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : nav_gui/CMakeFiles/nav_gui_gencpp.dir/depend
 

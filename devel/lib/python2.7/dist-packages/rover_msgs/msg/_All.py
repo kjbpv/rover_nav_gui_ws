@@ -25,6 +25,7 @@ uint16 grip
 uint8 chutes
 uint16 shovel
 
+
 """
   __slots__ = ['lw','rw','pan','tilt','camnum','q1','q2','q3','q4','q5','q6','grip','chutes','shovel']
   _slot_types = ['uint16','uint16','uint16','uint16','uint8','uint16','uint16','uint16','uint16','uint16','uint16','uint16','uint8','uint16']
@@ -104,8 +105,8 @@ uint16 shovel
     try:
       _x = self
       buff.write(_struct_4HB7HBH.pack(_x.lw, _x.rw, _x.pan, _x.tilt, _x.camnum, _x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6, _x.grip, _x.chutes, _x.shovel))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize(self, str):
     """
@@ -132,8 +133,8 @@ uint16 shovel
     try:
       _x = self
       buff.write(_struct_4HB7HBH.pack(_x.lw, _x.rw, _x.pan, _x.tilt, _x.camnum, _x.q1, _x.q2, _x.q3, _x.q4, _x.q5, _x.q6, _x.grip, _x.chutes, _x.shovel))
-    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
-    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
+    except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
+    except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
   def deserialize_numpy(self, str, numpy):
     """
