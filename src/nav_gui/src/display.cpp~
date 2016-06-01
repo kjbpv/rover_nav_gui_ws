@@ -39,8 +39,7 @@ void display::init(string mapImgFile, string radarImgFile, string waypointFile, 
     // screenshot parameters
     ifstream mpInitFile;
     mpInitFile.open(mapInitFile.c_str());
-    double LATval,LONGval,ptX,ptY,dYdLAT,dXdLONG,dMeterdPixel;
-    char empty; 
+    double LATval,LONGval,ptX,ptY,dYdLAT,dXdLONG,dMeterdPixel; 
 
 //    double LATval = 38.417127;
 //    double LONGval = -110.787396;
@@ -50,8 +49,7 @@ void display::init(string mapImgFile, string radarImgFile, string waypointFile, 
 //    double dXdLONG = 333722.798305457/2.0;
 //    double dMeterdPixel = 50.0/190.0;
 
-    mpInitFile >> LATval >> empty >> LONGval >> empty >> ptX >> empty >> ptY >> empty >> dYdLAT >> empty >> dXdLONG >> empty >> dMeterdPixel;
-    cout << "mapInitFile: " << LATval << LONGval << ptX << ptY << dYdLAT << dXdLONG << dMeterdPixel << std::endl;
+    mpInitFile >> LATval >> LONGval >> ptX >> ptY >> dYdLAT >> dXdLONG >> dMeterdPixel;
     cv::Point ptOrigin(ptX,ptY);
     myMap.init(mapBox, LATval, LONGval, ptOrigin, dYdLAT, dXdLONG, dMeterdPixel);
     

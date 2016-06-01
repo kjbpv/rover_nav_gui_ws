@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "astro_gui")
-set(astro_gui_MAINTAINER "kyle <kylejbrown17@gmail.com>")
-set(astro_gui_DEPRECATED "")
-set(astro_gui_VERSION "0.0.0")
-set(astro_gui_BUILD_DEPENDS "opencv2" "roscpp" "rospy" "std_msgs" "message_generation" "rover_msgs")
-set(astro_gui_RUN_DEPENDS "opencv2" "roscpp" "rospy" "std_msgs" "message_runtime" "rover_msgs")
-set(astro_gui_BUILDTOOL_DEPENDS "catkin")

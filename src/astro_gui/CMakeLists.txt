@@ -106,7 +106,7 @@ find_package(OpenCV REQUIRED)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
 #  LIBRARIES astro_gui
   CATKIN_DEPENDS roscpp rospy rover_msgs std_msgs
   DEPENDS system_lib

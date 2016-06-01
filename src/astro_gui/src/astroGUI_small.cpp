@@ -135,7 +135,7 @@ int main(int argc, char   **argv)
 	ros::Rate loop_rate(10); // publish at 10 Hz
 	
 	// Load and display GUI
-	cv::Mat baseGUI = cv::imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/AstronautAssistGUI.png");
+	cv::Mat baseGUI = cv::imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/AstronautAssistGUI.png");
 	cv::namedWindow("GUIwindow",CV_WINDOW_AUTOSIZE);
 	cv::imshow("GUIwindow",baseGUI);
 //	cv::pyrDown(baseGUI,baseGUI);
@@ -144,15 +144,15 @@ int main(int argc, char   **argv)
     
     // Load "On" buttons
     Mat ArmHighOn, ArmLowOn, ChuteCloseOn, ChuteOpenOn;
-    ArmHighOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmHighOn.png");
-    ArmLowOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmLowOn.png");
-    ChuteCloseOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteCloseOn.png");
-    ChuteOpenOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteOpenOn.png");
+    ArmHighOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmHighOn.png");
+    ArmLowOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmLowOn.png");
+    ChuteCloseOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteCloseOn.png");
+    ChuteOpenOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteOpenOn.png");
     Mat ArmHighOff, ArmLowOff, ChuteCloseOff, ChuteOpenOff;
-    ArmHighOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmHighOff.png");
-    ArmLowOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmLowOff.png");
-    ChuteCloseOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteCloseOff.png");
-    ChuteOpenOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteOpenOff.png");
+    ArmHighOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmHighOff.png");
+    ArmLowOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ArmLowOff.png");
+    ChuteCloseOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteCloseOff.png");
+    ChuteOpenOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/small/ChuteOpenOff.png");
 //    pyrDown(ArmHighOn,ArmHighOn);
 //    pyrDown(ArmHighOff,ArmHighOff);
 //    pyrDown(ArmLowOn,ArmLowOn);

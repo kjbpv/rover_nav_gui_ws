@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "astro_arm")
-set(astro_arm_MAINTAINER "kyle <kyle@todo.todo>")
-set(astro_arm_DEPRECATED "")
-set(astro_arm_VERSION "0.0.0")
-set(astro_arm_BUILD_DEPENDS "rover_msgs" "roscpp")
-set(astro_arm_RUN_DEPENDS "rover_msgs" "roscpp")
-set(astro_arm_BUILDTOOL_DEPENDS "catkin")

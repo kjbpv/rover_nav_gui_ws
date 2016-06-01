@@ -68,19 +68,19 @@ int main(int argc, char **argv)
     ros::Rate loop_rate(10); // 10 Hz
 
     // initialize GUI 
-//    std::string mapPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png"; // path to map image
-//    std::string radarPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/radar.png"; // path to radar image
-//    std::string waypointPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt"; // path to waypoint coords
-//    std::string obstaclePath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/obstacles.txt"; // path to obstacle coords
-//    std::string anchorPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/anchor.txt"; // path to anchor waypoint coords
-//    std::string mapInitPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt"; // path to map init coords
+    std::string mapPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png"; // path to map image
+    std::string radarPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/radar.png"; // path to radar image
+    std::string waypointPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt"; // path to waypoint coords
+    std::string obstaclePath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/obstacles.txt"; // path to obstacle coords
+    std::string anchorPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/anchor.txt"; // path to anchor waypoint coords
+    std::string mapInitPath = "/home/halrover/git/kyle/rover_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt"; // path to map init coords
 
-    std::string mapPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png"; // path to map image
-    std::string radarPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/radar.png"; // path to radar image
-    std::string waypointPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt"; // path to waypoint coords
-    std::string obstaclePath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/obstacles.txt"; // path to obstacle coords
-    std::string anchorPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/anchor.txt"; // path to anchor waypoint coords
-    std::string mapInitPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt"; // path to map init coords
+//    std::string mapPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/image.png"; // path to map image
+//    std::string radarPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/radar.png"; // path to radar image
+//    std::string waypointPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/waypoints.txt"; // path to waypoint coords
+//    std::string obstaclePath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/obstacles.txt"; // path to obstacle coords
+//    std::string anchorPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/anchor.txt"; // path to anchor waypoint coords
+//    std::string mapInitPath = "/home/kyle/gitMars/ros_nav_gui_ws/src/nav_gui/screenshots/initFiles/mapInit.txt"; // path to map init coords
     
     display myDisplay(mapPath,radarPath,waypointPath,obstaclePath,anchorPath,mapInitPath);
 
@@ -138,7 +138,8 @@ int main(int argc, char **argv)
         myDisplay.drawObstacles();
         myDisplay.drawAnchor();
         myDisplay.drawRover();
-        myDisplay.updateDisplay();
+        //myDisplay.updateDisplay();
+        myDisplay.updateDisplayMini();
         cv::waitKey(1);
 	    ros::spinOnce(); // catch the most recent message
         loop_rate.sleep();

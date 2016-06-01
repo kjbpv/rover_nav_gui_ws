@@ -1,8 +1,0 @@
-prefix=/home/kyle/gitMars/ros_nav_gui_ws/install
-
-Name: astro_arm
-Description: Description of astro_arm
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/kyle/gitMars/ros_nav_gui_ws/install/lib 
-Requires: 

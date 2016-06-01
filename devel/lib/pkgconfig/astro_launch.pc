@@ -1,8 +1,0 @@
-prefix=/home/kyle/gitMars/ros_nav_gui_ws/devel
-
-Name: astro_launch
-Description: Description of astro_launch
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/kyle/gitMars/ros_nav_gui_ws/devel/lib 
-Requires: 

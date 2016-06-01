@@ -223,6 +223,7 @@ void display::drawX(Mat img, int base, int height, int angle, Point center, Scal
 void display::updateDisplay()
 {
 //    cout << "display::updateDisplay()" << endl;
+    
     cv::imshow("mainWindow", mainBox);
 }
 

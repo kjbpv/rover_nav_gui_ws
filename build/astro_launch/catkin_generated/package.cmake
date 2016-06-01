@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "astro_launch")
-set(astro_launch_MAINTAINER "gary <gary@todo.todo>")
-set(astro_launch_DEPRECATED "")
-set(astro_launch_VERSION "0.0.0")
-set(astro_launch_BUILD_DEPENDS )
-set(astro_launch_RUN_DEPENDS "rover_msgs" "razor_imu_9dof" "nav_estimation" "drive_teleop" "vision" "psoc_driver")
-set(astro_launch_BUILDTOOL_DEPENDS "catkin")

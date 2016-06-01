@@ -4,7 +4,7 @@
 #include "std_msgs/Byte.h"
 #include "std_msgs/MultiArrayLayout.h"
 #include "std_msgs/MultiArrayDimension.h"
-#include "std_msgs/Int32MultiArray.h"
+#include "std_msgs/UInt16MultiArray.h"
 #include "rover_msgs/JointAngles.h"
 #include <iostream>
 #include <fstream>
@@ -58,18 +58,18 @@
 // define arm states
 
 // ARM_HIGH_FRONT
-#define Q1_ARM_HIGH_FRONT 1859
-#define Q2_ARM_HIGH_FRONT 968
-#define Q3_ARM_HIGH_FRONT 2003
+#define Q1_ARM_HIGH_FRONT 2028
+#define Q2_ARM_HIGH_FRONT 613
+#define Q3_ARM_HIGH_FRONT 2381
 #define Q4_ARM_HIGH_FRONT 1968
 #define Q5_ARM_HIGH_FRONT 0
 #define Q6_ARM_HIGH_FRONT 0
 
 // ARM_LOW_FRONT
-#define Q1_ARM_LOW_FRONT 1946
-#define Q2_ARM_LOW_FRONT 3087
-#define Q3_ARM_LOW_FRONT 2028
-#define Q4_ARM_LOW_FRONT 2053
+#define Q1_ARM_LOW_FRONT 1797 // most prone to error
+#define Q2_ARM_LOW_FRONT 2178 // about 8 inches above groun 
+#define Q3_ARM_LOW_FRONT 2891 // at an angle where it will basically move straight down by moving the shoulder alone
+#define Q4_ARM_LOW_FRONT 1903 // subject to change
 #define Q5_ARM_LOW_FRONT 0
 #define Q6_ARM_LOW_FRONT 0
 
@@ -189,6 +189,8 @@
 enum STATE {ARM_HIGH_FRONT, ARM_LOW_FRONT, ARM_HIGH_CHUTE_1, ARM_HIGH_CHUTE_2, ARM_HIGH_CHUTE_3, ARM_HIGH_CHUTE_4, ARM_HIGH_CHUTE_5, ARM_HIGH_CHUTE_6, ARM_LOW_CHUTE_1, ARM_LOW_CHUTE_2,  ARM_LOW_CHUTE_3, ARM_LOW_CHUTE_4, ARM_LOW_CHUTE_5, ARM_LOW_CHUTE_6, CHUTE_OPEN_1, CHUTE_OPEN_2, CHUTE_OPEN_3, CHUTE_OPEN_4, CHUTE_OPEN_5, CHUTE_OPEN_6, CHUTE_CLOSE_1, CHUTE_CLOSE_2, CHUTE_CLOSE_3, CHUTE_CLOSE_4, CHUTE_CLOSE_5,CHUTE_CLOSE_6};
 STATE state;
 int mouseClickFlag = 0;
+int armClickFlag = 0;
+int chuteClickFlag = 0;
 
 using namespace cv;
 
@@ -201,53 +203,62 @@ void mouseCallback(int event, int x, int y, int flags, void *userdata)
         
         if (x > X_BUTTON_1_LEFT && x < X_BUTTON_1_RIGHT)
         {
+            armClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) { state = ARM_HIGH_CHUTE_6; }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = ARM_HIGH_CHUTE_5; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) { state = ARM_HIGH_CHUTE_4; }
         }
         else if (x > X_BUTTON_2_LEFT && x < X_BUTTON_2_RIGHT)
         {
+            armClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) { state = ARM_LOW_CHUTE_6; }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = ARM_LOW_CHUTE_5; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) { state = ARM_LOW_CHUTE_4; }
         }
         else if (x > X_BUTTON_3_LEFT && x < X_BUTTON_3_RIGHT)
         {
+            chuteClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) { state = CHUTE_OPEN_6; }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = CHUTE_OPEN_5; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) { state = CHUTE_OPEN_4; }
         }
         else if (x > X_BUTTON_4_LEFT && x < X_BUTTON_4_RIGHT)
         {
+            chuteClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) { state = CHUTE_CLOSE_6; }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = CHUTE_CLOSE_5; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) {  state = CHUTE_CLOSE_4; }
         }
         else if (x > X_BUTTON_5_LEFT && x < X_BUTTON_5_RIGHT)
         {
+            armClickFlag = 1;
             if (y > Y_BUTTON_1_TOP && y < Y_BUTTON_1_BOTTOM) {  state = ARM_HIGH_FRONT;  }
             else if (y > Y_BUTTON_2_TOP && y < Y_BUTTON_2_BOTTOM) { state = ARM_LOW_FRONT; }
         }
         else if (x > X_BUTTON_6_LEFT && x < X_BUTTON_6_RIGHT)
         {
+            chuteClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) {  state = CHUTE_CLOSE_3;  }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) {  state = CHUTE_CLOSE_2;  }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) {  state = CHUTE_CLOSE_1;  }
         }
         else if (x > X_BUTTON_7_LEFT && x < X_BUTTON_7_RIGHT)
         {
+            chuteClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) {  state = CHUTE_OPEN_3;  }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = CHUTE_OPEN_2; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) { state = CHUTE_OPEN_1; }
         }
         else if (x > X_BUTTON_8_LEFT && x < X_BUTTON_8_RIGHT)
         {
+            armClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) { state = ARM_LOW_CHUTE_3; }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = ARM_LOW_CHUTE_2; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) { state = ARM_LOW_CHUTE_1; }
         }
         else if (x > X_BUTTON_9_LEFT && x < X_BUTTON_9_RIGHT)
         {
+            armClickFlag = 1;
             if (y > Y_BUTTON_3_TOP && y < Y_BUTTON_3_BOTTOM) { state = ARM_HIGH_CHUTE_3; }
             else if (y > Y_BUTTON_4_TOP && y < Y_BUTTON_4_BOTTOM) { state = ARM_HIGH_CHUTE_2; }
             else if (y > Y_BUTTON_5_TOP && y < Y_BUTTON_5_BOTTOM) { state = ARM_HIGH_CHUTE_1; }
@@ -262,28 +273,29 @@ int main(int argc, char   **argv)
 	ros::NodeHandle n;
 	
 	// Publishers
-	ros::Publisher astro_arm_pub = n.advertise<rover_msgs::JointAngles>("astro_GUI_arm",1);
-	ros::Publisher astro_chutes_pub = n.advertise<rover_msgs::JointAngles>("astro_GUI_chutes",1);
+	//ros::Publisher astro_arm_pub = n.advertise<rover_msgs::JointAngles>("astro_GUI_arm",1);
+    ros::Publisher astro_arm_pub = n.advertise<std_msgs::UInt16MultiArray>("astro_GUI_arm",1);	
+    ros::Publisher astro_chutes_pub = n.advertise<std_msgs::Byte>("astro_GUI_chutes",1);
 	
 	ros::Rate loop_rate(10); // publish at 10 Hz
 	
 	// messages
-	rover_msgs::JointAngles armCommand;
+	//rover_msgs::JointAngles armCommand;
+	std_msgs::UInt16MultiArray armCommand;
 	std_msgs::Byte chuteCommand;
 	
-	armCommand.q.push_back(0); // turret
-	armCommand.q.push_back(1); // shoulder
-	armCommand.q.push_back(2); // elbow
-	armCommand.q.push_back(3); // wrist
-	armCommand.q.push_back(4); // dynamixel 1
-	armCommand.q.push_back(5); // dynamixel 2
-	armCommand.solved = 1; // solved
+	armCommand.data.push_back(0); // turret
+	armCommand.data.push_back(1); // shoulder
+	armCommand.data.push_back(2); // elbow
+	armCommand.data.push_back(3); // wrist
+	armCommand.data.push_back(4); // dynamixel 1
+	armCommand.data.push_back(5); // dynamixel 2
 	
 	// chutecCommand // 0b     0-sciBox 0-enable 0-ch6 0-ch5  0-ch4 0-ch3 0-ch2 0-ch1
 	chuteCommand.data = 0b01000000;	
 	
 	// Load and display GUI
-	cv::Mat baseGUI = cv::imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/AstronautAssistGUI.png");
+	cv::Mat baseGUI = cv::imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/AstronautAssistGUI.png");
 	cv::namedWindow("GUIwindow",CV_WINDOW_AUTOSIZE);
 	cv::imshow("GUIwindow",baseGUI);
     Mat GUI;
@@ -291,15 +303,15 @@ int main(int argc, char   **argv)
     
     // Load "On" buttons
     Mat ArmHighOn, ArmLowOn, ChuteCloseOn, ChuteOpenOn;
-    ArmHighOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ArmHighOn.png");
-    ArmLowOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ArmLowOn.png");
-    ChuteCloseOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ChuteCloseOn.png");
-    ChuteOpenOn = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ChuteOpenOn.png");
+    ArmHighOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ArmHighOn.png");
+    ArmLowOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ArmLowOn.png");
+    ChuteCloseOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ChuteCloseOn.png");
+    ChuteOpenOn = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ChuteOpenOn.png");
     Mat ArmHighOff, ArmLowOff, ChuteCloseOff, ChuteOpenOff;
-    ArmHighOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ArmHighOff.png");
-    ArmLowOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ArmLowOff.png");
-    ChuteCloseOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ChuteCloseOff.png");
-    ChuteOpenOff = imread("/home/kyle/gitMars/ros_nav_gui_ws/src/astro_gui/src/gui_images/ChuteOpenOff.png");
+    ArmHighOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ArmHighOff.png");
+    ArmLowOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ArmLowOff.png");
+    ChuteCloseOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ChuteCloseOff.png");
+    ChuteOpenOff = imread("/home/halrover/git/kyle/rover_nav_gui_ws/src/astro_gui/src/gui_images/ChuteOpenOff.png");
     
     // define rectangular region to replace activebutton
     Mat activeArmHigh = GUI(Rect(X_BUTTON_1_LEFT,Y_BUTTON_3_TOP,BUTTON_WIDTH,BUTTON_HEIGHT));
@@ -327,12 +339,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_FRONT:
                     std::cout << "ARM_HIGH_FRONT" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_FRONT; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_FRONT; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_FRONT; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_FRONT; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_FRONT; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_FRONT; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_FRONT; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_FRONT; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_FRONT; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_FRONT; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_FRONT; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_FRONT; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -343,12 +355,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_FRONT:
                     std::cout << "ARM_LOW_FRONT" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_FRONT; // turret
-					armCommand.q[1] = Q2_ARM_LOW_FRONT; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_FRONT; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_FRONT; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_FRONT; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_FRONT; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_FRONT; // turret
+					armCommand.data[1] = Q2_ARM_LOW_FRONT; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_FRONT; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_FRONT; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_FRONT; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_FRONT; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -359,12 +371,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_CHUTE_1:
                     std::cout << "ARM_HIGH_CHUTE_1" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_CHUTE_1; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_CHUTE_1; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_CHUTE_1; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_CHUTE_1; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_CHUTE_1; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_CHUTE_1; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_CHUTE_1; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_CHUTE_1; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_CHUTE_1; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_CHUTE_1; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_CHUTE_1; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_CHUTE_1; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -375,12 +387,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_CHUTE_2:
                     std::cout << "ARM_HIGH_CHUTE_2" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_CHUTE_2; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_CHUTE_2; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_CHUTE_2; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_CHUTE_2; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_CHUTE_2; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_CHUTE_2; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_CHUTE_2; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_CHUTE_2; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_CHUTE_2; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_CHUTE_2; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_CHUTE_2; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_CHUTE_2; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -391,12 +403,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_CHUTE_3:
                     std::cout << "ARM_HIGH_CHUTE_3" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_CHUTE_3; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_CHUTE_3; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_CHUTE_3; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_CHUTE_3; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_CHUTE_3; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_CHUTE_3; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_CHUTE_3; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_CHUTE_3; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_CHUTE_3; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_CHUTE_3; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_CHUTE_3; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_CHUTE_3; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -407,12 +419,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_CHUTE_4:
                     std::cout << "ARM_HIGH_CHUTE_4" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_CHUTE_4; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_CHUTE_4; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_CHUTE_4; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_CHUTE_4; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_CHUTE_4; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_CHUTE_4; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_CHUTE_4; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_CHUTE_4; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_CHUTE_4; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_CHUTE_4; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_CHUTE_4; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_CHUTE_4; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -423,12 +435,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_CHUTE_5:
                     std::cout << "ARM_HIGH_CHUTE_5" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_CHUTE_5; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_CHUTE_5; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_CHUTE_5; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_CHUTE_5; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_CHUTE_5; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_CHUTE_5; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_CHUTE_5; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_CHUTE_5; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_CHUTE_5; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_CHUTE_5; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_CHUTE_5; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_CHUTE_5; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -439,12 +451,12 @@ int main(int argc, char   **argv)
                 case ARM_HIGH_CHUTE_6:
                     std::cout << "ARM_HIGH_CHUTE_6" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_HIGH_CHUTE_6; // turret
-					armCommand.q[1] = Q2_ARM_HIGH_CHUTE_6; // shoulder
-					armCommand.q[2] = Q3_ARM_HIGH_CHUTE_6; // elbow
-					armCommand.q[3] = Q4_ARM_HIGH_CHUTE_6; // wrist
-					armCommand.q[4] = Q5_ARM_HIGH_CHUTE_6; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_HIGH_CHUTE_6; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_HIGH_CHUTE_6; // turret
+					armCommand.data[1] = Q2_ARM_HIGH_CHUTE_6; // shoulder
+					armCommand.data[2] = Q3_ARM_HIGH_CHUTE_6; // elbow
+					armCommand.data[3] = Q4_ARM_HIGH_CHUTE_6; // wrist
+					armCommand.data[4] = Q5_ARM_HIGH_CHUTE_6; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_HIGH_CHUTE_6; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -455,12 +467,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_CHUTE_1:
                     std::cout << "ARM_LOW_CHUTE_1" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_CHUTE_1; // turret
-					armCommand.q[1] = Q2_ARM_LOW_CHUTE_1; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_CHUTE_1; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_CHUTE_1; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_CHUTE_1; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_CHUTE_1; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_CHUTE_1; // turret
+					armCommand.data[1] = Q2_ARM_LOW_CHUTE_1; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_CHUTE_1; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_CHUTE_1; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_CHUTE_1; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_CHUTE_1; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -471,12 +483,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_CHUTE_2:
                     std::cout << "ARM_LOW_CHUTE_2" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_CHUTE_2; // turret
-					armCommand.q[1] = Q2_ARM_LOW_CHUTE_2; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_CHUTE_2; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_CHUTE_2; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_CHUTE_2; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_CHUTE_2; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_CHUTE_2; // turret
+					armCommand.data[1] = Q2_ARM_LOW_CHUTE_2; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_CHUTE_2; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_CHUTE_2; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_CHUTE_2; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_CHUTE_2; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -487,12 +499,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_CHUTE_3:
                     std::cout << "ARM_LOW_CHUTE_3" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_CHUTE_3; // turret
-					armCommand.q[1] = Q2_ARM_LOW_CHUTE_3; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_CHUTE_3; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_CHUTE_3; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_CHUTE_3; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_CHUTE_3; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_CHUTE_3; // turret
+					armCommand.data[1] = Q2_ARM_LOW_CHUTE_3; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_CHUTE_3; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_CHUTE_3; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_CHUTE_3; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_CHUTE_3; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -503,12 +515,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_CHUTE_4:
                     std::cout << "ARM_LOW_CHUTE_4" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_CHUTE_4; // turret
-					armCommand.q[1] = Q2_ARM_LOW_CHUTE_4; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_CHUTE_4; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_CHUTE_4; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_CHUTE_4; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_CHUTE_4; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_CHUTE_4; // turret
+					armCommand.data[1] = Q2_ARM_LOW_CHUTE_4; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_CHUTE_4; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_CHUTE_4; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_CHUTE_4; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_CHUTE_4; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -519,12 +531,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_CHUTE_5:
                     std::cout << "ARM_LOW_CHUTE_5" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_CHUTE_5; // turret
-					armCommand.q[1] = Q2_ARM_LOW_CHUTE_5; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_CHUTE_5; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_CHUTE_5; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_CHUTE_5; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_CHUTE_5; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_CHUTE_5; // turret
+					armCommand.data[1] = Q2_ARM_LOW_CHUTE_5; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_CHUTE_5; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_CHUTE_5; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_CHUTE_5; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_CHUTE_5; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -535,12 +547,12 @@ int main(int argc, char   **argv)
                 case ARM_LOW_CHUTE_6:
                     std::cout << "ARM_LOW_CHUTE_6" << std::endl;
                     
-                	armCommand.q[0] = Q1_ARM_LOW_CHUTE_6; // turret
-					armCommand.q[1] = Q2_ARM_LOW_CHUTE_6; // shoulder
-					armCommand.q[2] = Q3_ARM_LOW_CHUTE_6; // elbow
-					armCommand.q[3] = Q4_ARM_LOW_CHUTE_6; // wrist
-					armCommand.q[4] = Q5_ARM_LOW_CHUTE_6; // dynamixel 1
-					armCommand.q[5] = Q6_ARM_LOW_CHUTE_6; // dynamixel 2
+                	armCommand.data[0] = Q1_ARM_LOW_CHUTE_6; // turret
+					armCommand.data[1] = Q2_ARM_LOW_CHUTE_6; // shoulder
+					armCommand.data[2] = Q3_ARM_LOW_CHUTE_6; // elbow
+					armCommand.data[3] = Q4_ARM_LOW_CHUTE_6; // wrist
+					armCommand.data[4] = Q5_ARM_LOW_CHUTE_6; // dynamixel 1
+					armCommand.data[5] = Q6_ARM_LOW_CHUTE_6; // dynamixel 2
                     
                     ArmHighOff.copyTo(inactiveArmHigh);
                     ArmLowOff.copyTo(inactiveArmLow);
@@ -672,8 +684,16 @@ int main(int argc, char   **argv)
                     
             }
             
-            astro_arm_pub.publish(armCommand);
-            astro_chutes_pub.publish(chuteCommand);
+            if (armClickFlag) 
+            { 
+                astro_arm_pub.publish(armCommand);
+                armClickFlag = 0;
+            }
+            if (chuteClickFlag)
+            {   
+                astro_chutes_pub.publish(chuteCommand);
+                chuteClickFlag = 0;
+            }
         }
         
 		ros::spinOnce();

@@ -1,2 +1,0 @@
-astro_arm:astro_gui:astro_launch:nav_gui:rover_msgs
--DCATKIN_DEVEL_PREFIX=/home/kyle/gitMars/ros_nav_gui_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kyle/gitMars/ros_nav_gui_ws/install -G Unix Makefiles
